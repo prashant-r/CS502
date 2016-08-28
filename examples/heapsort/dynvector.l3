@@ -1,0 +1,86 @@
+;; A dynamic vector that knows about its size
+;; Copyright (C) 2013 Jonas Wagner
+
+;; Requires routines from the standard library.
+
+;; This class implements a resizeable, dynamic vector that knows about its size.
+;; It's structure is the following:
+;; v: block of tag 4
+;; v[0]: size of the dynvector
+;; v[1]: block of tag 5 holding the contents of the dynvector
+
+;; By convention, all definitions of this file start with dynvector. The ones
+;; called dynvector-something are public, whereas the ones called
+;; dynvector_something should be considered private.
+
+;; Poor man's assert
+(def dynvector_assert (fun (b msg)
+                           (if (= b #f) (begin
+                                          (string-print "Assertion failure: ")
+                                          (string-print msg)
+                                          (newline-print)))))
+
+;; A constant representing the initial size of a vector
+(def dynvector_INITIAL_CAPACITY 5)
+
+;; Create a new, empty vector
+(def dynvector-empty (fun ()
+     (let ((v (@block-alloc-4 2)))
+       (@block-set! v 0 0)
+       (@block-set! v 1 (@block-alloc-5 dynvector_INITIAL_CAPACITY))
+       v)))
+
+;; Returns the size of a vector
+(def dynvector-size (fun (v) (@block-get v 0)))
+
+;; Returns the capacity of a dynvector
+(def dynvector_capacity (fun (v) (@block-length (@block-get v 1))))
+
+;; Get the element at index n of vector v
+(def dynvector-get (fun (v n)
+                        (dynvector_assert (>= n 0) "Index must be non-negative")
+                        (dynvector_assert (<  n (dynvector-size v)) "Index must be smaller than vector size")
+                        (@block-get (@block-get v 1) n)))
+
+;; Set the element at index n of vector v to value val
+(def dynvector-set! (fun (v n val)
+                         (dynvector_assert (>= n 0) "Index must be non-negative")
+                         (dynvector_assert (<  n (dynvector-size v)) "Index must be smaller than vector size")
+                         (@block-set! (@block-get v 1) n val)))
+
+;; Grows the dynamic vector. This allocates a new vector of double size, and
+;; copies over the elements.
+(def dynvector_grow (fun (v)
+                         (let ((vn (@block-alloc-5 (* (dynvector_capacity v) 2))))
+                           (rec loop ((i 0))
+                                (if (< i (dynvector-size v))
+                                  (begin
+                                    (@block-set! vn i (dynvector-get v i))
+                                    (loop (+ i 1)))))
+                           (@block-set! v 1 vn))))
+                         
+
+;; Push an element on the back of a vector
+(def dynvector-push-back! (fun (v val)
+                               (if (= (dynvector-size v) (dynvector_capacity v))
+                                 (dynvector_grow v))
+                               (@block-set! (@block-get v 1) (dynvector-size v) val)
+                               (@block-set! v 0 (+ (dynvector-size v) 1))))
+
+;; Pop an element from the back of a vector
+(def dynvector-pop-back! (fun (v)
+                              (dynvector_assert (> (dynvector-size v) 0) "Cannot pop an empty vector!")
+                              (@block-set! v 0 (- (@block-get v 0) 1))
+                              (@block-get (@block-get v 1) (@block-get v 0))))
+
+;; Prints a dynvector to stdout
+(def dynvector-print (fun (v)
+                          (char-print '[')
+                          (rec loop ((i 0))
+                               (if (< i (dynvector-size v))
+                                 (begin
+                                   (int-print (dynvector-get v i))
+                                   (if (< i (- (dynvector-size v) 1))
+                                     (string-print ", "))
+                                   (loop (+ i 1)))))
+                          (char-print ']')))

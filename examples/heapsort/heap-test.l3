@@ -1,0 +1,34 @@
+(def h (dynvector-empty))
+
+(heap-push! h 13)
+(heap-push! h 5)
+(heap-push! h 3)
+(heap-push! h 2)
+(heap-push! h 11)
+(heap-push! h 19)
+(heap-push! h 7)
+
+(dynvector-print h) (newline-print)
+
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+(int-print (heap-pop! h)) (newline-print)
+
+
+(dynvector-push-back! h 13)
+(dynvector-push-back! h 5)
+(dynvector-push-back! h 3)
+(dynvector-push-back! h 2)
+(dynvector-push-back! h 11)
+(dynvector-push-back! h 19)
+(dynvector-push-back! h 7)
+
+(dynvector-print h) (newline-print)
+
+(heap-sort! h)
+
+(dynvector-print h) (newline-print)

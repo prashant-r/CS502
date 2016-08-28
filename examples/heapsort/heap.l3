@@ -1,0 +1,117 @@
+;; Methods for constructing heaps
+;; Copyright (C) 2013 Jonas Wagner
+
+;; This is heavily inspired by (or rather shamelessly copied from) Python's
+;; heapq package.
+
+;; Requires the routines from the standard library, dynvector.l3 and copy.l3.
+
+;; Heaps are dynvectors for which a[k] <= a[2*k+1] and a[k] <= a[2*k+2] for
+;; all k, counting elements from 0.  For the sake of comparison,
+;; non-existing elements are considered to be infinite.  The interesting
+;; property of a heap is that a[0] is always its smallest element.
+;; 
+;; Usage:
+;; 
+;; (dynvector-empty)    # creates an empty heap
+;; (heap-push! h i)     # pushes a new item on the heap
+;; (heap-pop! h)        # pops and returns the smallest item from the heap
+;; (dynvector-get h 0)  # smallest item on the heap without popping it
+;; (heap-heapify! v)    # transforms dynvector into a heap, in-place, in linear
+;;                      # time
+;;
+;; Our API differs from textbook heap algorithms as follows:
+;; 
+;; - We use 0-based indexing.  This makes the relationship between the
+;;   index for a node and the indexes for its children slightly less
+;;   obvious, but is more suitable since L₃ uses 0-based indexing.
+;; 
+;; - Our heap-pop! method returns the smallest item, not the largest.
+
+;; 'h' is a heap at all indices >= startpos, except possibly for pos.  pos
+;; is the index of a leaf with a possibly out-of-order value.  Restore the
+;; heap invariant.
+(def heap_siftdown
+     (fun (h startpos pos)
+          (let* ((newitem (dynvector-get h pos))
+                 ;; Follow the path to the root, moving parents
+                 ;; down until finding a place where newitem fits.
+                 (newpos (rec loop ((p pos))
+                              (if (> p startpos)
+                                (let* ((parentpos (/ (- p 1) 2))
+                                       (parent (dynvector-get h parentpos)))
+                                  (if (< newitem parent)
+                                    (begin
+                                      (dynvector-set! h p parent)
+                                      (loop parentpos))
+                                    p))
+                                p))))
+            (dynvector-set! h newpos newitem))))
+
+;; The child indices of heap index pos are already heaps, and we want to make
+;; a heap at index pos too.  We do this by bubbling the smaller child of
+;; pos up (and so on with that child's children, etc) until hitting a leaf,
+;; then using _siftdown to move the oddball originally at index pos into place.
+(def heap_siftup
+     (fun (h pos)
+          (let* ((endpos (dynvector-size h))
+                 (startpos pos)
+                 (newitem (dynvector-get h pos))
+                 ;; Bubble up the smaller child until hitting a leaf
+                 (emptypos (rec loop ((p pos) (childpos (+ (* pos 2) 1)))
+                                (if (< childpos endpos)
+                                  (begin
+                                    ;; Compute the position of the smaller child
+                                    (let* ((rightpos (+ childpos 1))
+                                           (smallerpos (if (< rightpos endpos)
+                                                         (if (>= (dynvector-get h childpos)
+                                                                 (dynvector-get h rightpos))
+                                                           rightpos
+                                                           childpos)
+                                                         childpos)))
+                                      ;; Move the smaller child up
+                                      (dynvector-set! h p (dynvector-get h smallerpos))
+                                      (loop smallerpos (+ (* smallerpos 2) 1))))
+                                  p))))
+            ;; The leaf at emptypos is empty now. Put newitem
+            ;; there, and bubble it up to its final resting place
+            ;; (by sifting its parents down)
+            (dynvector-set! h emptypos newitem)
+            (heap_siftdown h startpos emptypos))))
+
+
+;; Pushes an element onto the heap, maintaining the heap invariant
+(def heap-push! (fun (h val)
+                     (dynvector-push-back! h val)
+                     (heap_siftdown h 0 (- (dynvector-size h) 1))))
+
+;; Pops the smallest element off the heap, maintaining the heap invariant
+(def heap-pop! (fun (h)
+                    (let ((lastelt (dynvector-pop-back! h)))
+                      (if (> (dynvector-size h) 0)
+                        (let ((result (dynvector-get h 0)))
+                          (dynvector-set! h 0 lastelt)
+                          (heap_siftup h 0)
+                          result)
+                        lastelt))))
+
+;; Transform dynvector into heap, in-place, in O(len(x)) time.
+(def heap-heapify! (fun (x)
+                        (rec loop ((i (- (/ (dynvector-size x) 2) 1)))
+                             (if (>= i 0)
+                               (begin
+                                 (heap_siftup x i)
+                                 (loop (- i 1)))))))
+
+;; Sort a dynvector using heapsort in O(n log n) time
+;; Although this sorts the vector given as parameter, the sort is not in-place,
+;; because the current function prototypes make this difficult.
+(def heap-sort! (fun (x)
+                     (let ((a (deepcopy x)))
+                       (heap-heapify! a)
+                       (rec loop ((i 0))
+                            (if (< i (dynvector-size x))
+                              (begin
+                                (dynvector-set! x i (heap-pop! a))
+                                (loop (+ i 1))))))))
+

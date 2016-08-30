@@ -181,7 +181,10 @@ object L3Parser {
   private def sLet_*(bdgs: Seq[(String,Tree)], body: Tree)
                     (implicit p: Position): Tree =
  {
-   (bdgs :\ body) ( (b, t) => Let(List(b), t))
+   bdgs match{
+     case Seq() => (body)
+     case Seq(d, ds @ _*) => Let(Seq(d), sLet_*(ds, body))
+   }
  }
   private def sBegin(exprs: Seq[Tree])(implicit p: Position): Tree =
   {

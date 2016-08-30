@@ -6,6 +6,10 @@
     </properties>
                      <testcase classname="l3.test.L3DesugaringWhitebox" name="testSAnd" time="-0.001">
                                                  
+                                               </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSNot" time="-0.001">
+                                                 
+                                               </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSOr" time="-0.001">
+                                                 
                                                </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSBegin1" time="-0.001">
                                                  
                                                </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSBegin2" time="-0.001">
@@ -29,10 +33,6 @@
                                                </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSCond1" time="-0.001">
                                                  
                                                </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSCond2" time="-0.001">
-                                                 
-                                               </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSOr" time="-0.001">
-                                                 
-                                               </testcase><testcase classname="l3.test.L3DesugaringWhitebox" name="testSNot" time="-0.001">
                                                  
                                                </testcase>
                      <system-out></system-out>

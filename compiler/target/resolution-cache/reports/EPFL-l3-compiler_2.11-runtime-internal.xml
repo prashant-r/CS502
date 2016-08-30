@@ -7,27 +7,27 @@
 		revision="1.0"
 		conf="runtime-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20160828194308"/>
+		date="20160829002920"/>
 	<dependencies>
 		<module organisation="com.lihaoyi" name="fastparse_2.11">
-			<revision name="0.3.4" status="release" pubdate="20151217224253" resolver="public" artresolver="public" homepage="https://github.com/lihaoyi/scala-parser" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="1">
+			<revision name="0.3.4" status="release" pubdate="20151217224253" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/scala-parser" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="1">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="2684" time="57" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse_2.11/ivy-0.3.4.xml" searched="true" original-local-location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse_2.11/ivy-0.3.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom"/>
+				<metadata-artifact status="no" details="" size="3378" time="0" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse_2.11/ivy-0.3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom"/>
 				<caller organisation="EPFL" name="l3-compiler_2.11" conf="compile, runtime-internal, runtime, optional" rev="0.3.4" rev-constraint-default="0.3.4" rev-constraint-dynamic="0.3.4" callerrev="1.0"/>
 				<artifacts>
-					<artifact name="fastparse_2.11" type="jar" ext="jar" status="successful" details="" size="307820" time="188" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse_2.11/jars/fastparse_2.11-0.3.4.jar">
+					<artifact name="fastparse_2.11" type="jar" ext="jar" status="no" details="" size="307820" time="0" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse_2.11/jars/fastparse_2.11-0.3.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.lihaoyi" name="fastparse-utils_2.11">
-			<revision name="0.3.4" status="release" pubdate="20151217224230" resolver="public" artresolver="public" homepage="https://github.com/lihaoyi/scala-parser" downloaded="true" searched="true" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
+			<revision name="0.3.4" status="release" pubdate="20151217224230" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/lihaoyi/scala-parser" downloaded="false" searched="false" default="false" conf="compile, runtime(*), master(compile), runtime, compile(*), master" position="2">
 				<license name="MIT license" url="http://www.opensource.org/licenses/mit-license.php"/>
-				<metadata-artifact status="successful" details="" size="2521" time="47" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/ivy-0.3.4.xml" searched="true" original-local-location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/ivy-0.3.4.xml.original" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom"/>
+				<metadata-artifact status="no" details="" size="3246" time="0" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/ivy-0.3.4.xml" searched="false" origin-is-local="false" origin-location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom"/>
 				<caller organisation="com.lihaoyi" name="fastparse_2.11" conf="default, compile, runtime, master" rev="0.3.4" rev-constraint-default="0.3.4" rev-constraint-dynamic="0.3.4" callerrev="0.3.4"/>
 				<artifacts>
-					<artifact name="fastparse-utils_2.11" type="jar" ext="jar" status="successful" details="" size="35289" time="101" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/jars/fastparse-utils_2.11-0.3.4.jar">
+					<artifact name="fastparse-utils_2.11" type="jar" ext="jar" status="no" details="" size="35289" time="0" location="/Users/prashantravi/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/jars/fastparse-utils_2.11-0.3.4.jar">
 						<origin-location is-local="false" location="https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar"/>
 					</artifact>
 				</artifacts>

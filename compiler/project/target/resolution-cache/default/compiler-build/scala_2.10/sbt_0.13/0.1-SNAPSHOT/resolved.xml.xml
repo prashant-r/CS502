@@ -4,7 +4,7 @@
 		module="compiler-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160828194132"
+		publication="20160829002909"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

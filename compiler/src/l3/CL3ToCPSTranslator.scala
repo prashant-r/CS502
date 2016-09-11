@@ -152,6 +152,11 @@ object CL3ToCPSTranslator extends (S.Tree => C.Tree) {
       {
          tempLetC("ac", Seq(), cond(cond2,trueC,falseC))(aC =>cond(cond1,aC,litToCont(f1)))
       }
+      case S.If(cond1,S.Lit(t1), cond2) =>
+      {
+         tempLetC("ac", Seq(), cond(cond2,trueC,falseC))(aC =>cond(cond1,litToCont(t1), aC))
+      }
+      
       case S.Prim(p: L3TestPrimitive, args) =>
         nonTail_*(args)(as => C.If(p, as, trueC, falseC))
 

@@ -3,8 +3,6 @@
 [0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 4 initial tasks for 4 tests.[0m
 [0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Blackbox, sbt.ForkMain$AnnotatedFingerscan@6dbbbacf, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[34mTest run started[0m[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
@@ -25,8 +23,6 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional2[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional2[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional3[0m started[0m
@@ -47,6 +43,20 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringRec[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringStrings[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists5[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists5[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists6[0m started[0m
@@ -73,22 +83,6 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings3[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings4[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings4[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestAppOrder[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestAppOrder[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
@@ -149,7 +143,13 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
-[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 5.521s[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 4.283s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
 [0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_NonTail, sbt.ForkMain$AnnotatedFingerscan@7886a448, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[34mTest run started[0m[0m
@@ -157,10 +157,12 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailLiteral[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLet[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLet[0m finished[0m
-[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.124s[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 2 total, 0.109s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 2 events.[0m
 [0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringWhitebox, sbt.ForkMain$AnnotatedFingerscan@3ea2ef50, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin2[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin2[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun1[0m started[0m
@@ -189,14 +191,10 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSOr[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSNot[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSNot[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m finished[0m
-[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 15 total, 0.259s[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 15 total, 0.255s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 15 events.[0m
 [0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringBlackbox, sbt.ForkMain$AnnotatedFingerscan@4e96b9b6, false, [SuiteSelector])[0m
 [0m[[0minfo[0m] [0m[34mTest run started[0m[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
@@ -217,8 +215,6 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional2[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional2[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional3[0m started[0m
@@ -239,6 +235,20 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringRec[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringStrings[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists5[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists5[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists6[0m started[0m
@@ -265,22 +275,6 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings3[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings4[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings4[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m finished[0m
-[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m started[0m
-[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestAppOrder[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestAppOrder[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
@@ -341,7 +335,13 @@
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
 [0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
 [0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
-[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 3.438s[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 2.247s[0m[0m
 [0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
 [0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
 [0m[[0minfo[0m] [0mPassed: Total 163, Failed 0, Errors 0, Passed 163[0m

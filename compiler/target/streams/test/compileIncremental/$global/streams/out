@@ -17,7 +17,7 @@
 [0m[[0minfo[0m] [0mCompiling 16 Scala sources to /u/antor/u7/ravi18/CS502/compiler/target/scala-2.11/test-classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 2522c38, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 1a8481bb, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-feature[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
@@ -33,7 +33,7 @@
 [0m[[33mwarn[0m] [0m  "#u"[0m
 [0m[[33mwarn[0m] [0m  ^[0m
 [0m[[33mwarn[0m] [0mtwo warnings found[0m
-[0m[[0mdebug[0m] [0mScala compilation took 7.019070795 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 2.569277795 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

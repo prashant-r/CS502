@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/Users/prashantravi/Documents/workspace/Compiler/compiler/}l3...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/u/antor/u7/ravi18/CS502/compiler/}l3...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: EPFL#l3-compiler_2.11;1.0[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -7,9 +7,22 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for EPFL#l3-compiler_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@64265588[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@e54d99[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: sbt.ivyint.MergedDescriptors@e54d99[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-library/2.11.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-library;2.11.7[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom (2.11.7)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.pom(pom.original) (43ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-library/2.11.7/jars/scala-library.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in public[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
@@ -17,8 +30,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse_2.11;0.3.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lihaoyi#fastparse_2.11;0.3.4 {compile=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse_2.11;0.3.4[0m
-[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse_2.11;0.3.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse_2.11;0.3.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.lihaoyi#fastparse_2.11;0.3.4 {compile=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.lihaoyi/fastparse_2.11/0.3.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.lihaoyi#fastparse_2.11;0.3.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.lihaoyi#fastparse_2.11;0.3.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom (0.3.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse_2.11;0.3.4!fastparse_2.11.pom(pom.original) (61ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.lihaoyi/fastparse_2.11/0.3.4/jars/fastparse_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse_2.11;0.3.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.lihaoyi#fastparse_2.11;0.3.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
@@ -28,8 +54,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.lihaoyi#fastparse_2.11;0.3.4->com.lihaoyi#fastparse-utils_2.11;0.3.4 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse-utils_2.11;0.3.4 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.lihaoyi#fastparse-utils_2.11;0.3.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse-utils_2.11;0.3.4[0m
-[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse-utils_2.11;0.3.4 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse-utils_2.11;0.3.4 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.lihaoyi#fastparse-utils_2.11;0.3.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.lihaoyi/fastparse-utils_2.11/0.3.4/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.lihaoyi#fastparse-utils_2.11;0.3.4[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.lihaoyi#fastparse-utils_2.11;0.3.4[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom (0.3.4)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse-utils_2.11;0.3.4!fastparse-utils_2.11.pom(pom.original) (45ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.lihaoyi/fastparse-utils_2.11/0.3.4/jars/fastparse-utils_2.11.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse-utils_2.11;0.3.4 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.lihaoyi#fastparse_2.11;0.3.4->com.lihaoyi#fastparse-utils_2.11;0.3.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.lihaoyi#fastparse-utils_2.11;0.3.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.lihaoyi#fastparse-utils_2.11;0.3.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
@@ -92,21 +131,77 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.novocode#junit-interface;0.10-M2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: com.novocode#junit-interface;0.10-M2 {test=[default(compile)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.novocode#junit-interface;0.10-M2[0m
-[0m[[0mdebug[0m] [0m	found com.novocode#junit-interface;0.10-M2 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving com.novocode#junit-interface;0.10-M2 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: com.novocode#junit-interface;0.10-M2 {test=[default(compile)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.novocode/junit-interface/0.10-M2/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for com.novocode#junit-interface;0.10-M2[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for com.novocode#junit-interface;0.10-M2[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom (0.10-M2)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] com.novocode#junit-interface;0.10-M2!junit-interface.pom(pom.original) (51ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/com.novocode/junit-interface/0.10-M2/jars/junit-interface.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar[0m
+[0m[[0mdebug[0m] [0m	found com.novocode#junit-interface;0.10-M2 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving junit#junit-dep;4.10 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: junit#junit-dep;4.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: junit#junit-dep;4.10[0m
-[0m[[0mdebug[0m] [0m	found junit#junit-dep;4.10 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving junit#junit-dep;4.10 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: junit#junit-dep;4.10 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/junit/junit-dep/4.10/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for junit#junit-dep;4.10[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for junit#junit-dep;4.10[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom (4.10)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] junit#junit-dep;4.10!junit-dep.pom(pom.original) (50ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/junit/junit-dep/4.10/jars/junit-dep.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar[0m
+[0m[[0mdebug[0m] [0m	found junit#junit-dep;4.10 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-core;1.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.hamcrest#hamcrest-core;1.1[0m
-[0m[[0mdebug[0m] [0m	found org.hamcrest#hamcrest-core;1.1 in sbt-chain[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-core;1.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.hamcrest#hamcrest-core;1.1 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.hamcrest/hamcrest-core/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.hamcrest#hamcrest-core;1.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.hamcrest#hamcrest-core;1.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom (1.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.hamcrest#hamcrest-core;1.1!hamcrest-core.pom(pom.original) (49ms)[0m
+[0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-parent;1.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.hamcrest#hamcrest-parent;1.1 {}[0m
+[0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-parent;1.1 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.hamcrest#hamcrest-parent;1.1 {}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.hamcrest/hamcrest-parent/1.1/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.hamcrest#hamcrest-parent;1.1[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.hamcrest#hamcrest-parent;1.1[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom (1.1)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.hamcrest#hamcrest-parent;1.1!hamcrest-parent.pom(pom.original) (48ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.hamcrest/hamcrest-parent/1.1/jars/hamcrest-parent.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.jar[0m
+[0m[[0mdebug[0m] [0mCLIENT ERROR: Not Found url=https://repo1.maven.org/maven2/org/hamcrest/hamcrest-parent/1.1/hamcrest-parent-1.1.jar[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.hamcrest/hamcrest-core/1.1/jars/hamcrest-core.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar[0m
+[0m[[0mdebug[0m] [0m	found org.hamcrest#hamcrest-core;1.1 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->compile][0m
@@ -115,8 +210,21 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-tools.testing#test-interface;0.5 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-tools.testing#test-interface;0.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-tools.testing#test-interface;0.5[0m
-[0m[[0mdebug[0m] [0m	found org.scala-tools.testing#test-interface;0.5 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scala-tools.testing#test-interface;0.5 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-tools.testing#test-interface;0.5 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-tools.testing/test-interface/0.5/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-tools.testing#test-interface;0.5[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-tools.testing#test-interface;0.5[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom (0.5)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-tools.testing#test-interface;0.5!test-interface.pom(pom.original) (51ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-tools.testing/test-interface/0.5/jars/test-interface.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-tools.testing#test-interface;0.5 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->compile][0m
@@ -209,7 +317,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->junit#junit-dep;4.10 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies junit#junit-dep;4.10->org.hamcrest#hamcrest-core;1.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.novocode#junit-interface;0.10-M2->org.scala-tools.testing#test-interface;0.5 [compile->compile(*)][0m
@@ -235,38 +343,64 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->default][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-compiler;2.11.7[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in sbt-chain[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-compiler;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-compiler;2.11.7 {scala-tool=[default, optional(default)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-compiler/2.11.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-compiler;2.11.7[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-compiler;2.11.7[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom (2.11.7)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.pom(pom.original) (43ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-compiler/2.11.7/jars/scala-compiler.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-compiler;2.11.7 in public[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->default][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->optional(default)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
-[0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-reflect;2.11.7[0m
-[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.7 in sbt-chain[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0minfo[0m] [0mResolving org.scala-lang#scala-reflect;2.11.7 ...[0m
+[0m[[0mdebug[0m] [0msbt-chain-delegate: Checking cache for: dependency: org.scala-lang#scala-reflect;2.11.7 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-reflect/2.11.7/ivys/ivy.xml[0m
+[0m[[0mdebug[0m] [0m	local: no ivy file found for org.scala-lang#scala-reflect;2.11.7[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: found md file for org.scala-lang#scala-reflect;2.11.7[0m
+[0m[[0mdebug[0m] [0m		=> https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom (2.11.7)[0m
+[0m[[0mdebug[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.pom[0m
+[0m[[0mdebug[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.pom(pom.original) (40ms)[0m
+[0m[[0mdebug[0m] [0m		tried /homes/ravi18/.ivy2/local/org.scala-lang/scala-reflect/2.11.7/jars/scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	found org.scala-lang#scala-reflect;2.11.7 in public[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-reflect;2.11.7[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang#scala-reflect;2.11.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-reflect;2.11.7->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-xml_2.11;1.0.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-xml_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-xml_2.11;1.0.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-xml_2.11;1.0.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-xml_2.11;1.0.4 [compile->runtime(*)][0m
@@ -274,14 +408,14 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.4 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-xml_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [runtime->compile][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 {compile=[compile(*), master(compile)], runtime=[runtime(*)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->compile(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [compile->master(*)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [compile->master(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->master(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.6 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4->org.scala-lang#scala-library;2.11.7 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [compile->runtime(*)][0m
@@ -299,9 +433,9 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4 [runtime->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-compiler;2.11.7 [scala-tool->optional(default)][0m
-[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->master(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->master(compile)][0m
 [0m[[0minfo[0m] [0mResolving jline#jline;2.12.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(*)]}[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: jline#jline;2.12.1 {optional=[compile(*), master(compile)]}[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: jline#jline;2.12.1[0m
 [0m[[0mdebug[0m] [0m	found jline#jline;2.12.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.scala-lang#scala-compiler;2.11.7->jline#jline;2.12.1 [optional->compile(*)][0m
@@ -312,31 +446,76 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler_2.11;1.0->org.scala-lang#scala-library;2.11.7 [scala-tool->optional(default)][0m
 [0m[[0mdebug[0m] [0m	resolved ivy file produced in cache[0m
 [0m[[0mdebug[0m] [0m:: downloading artifacts ::[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-library;2.11.7!scala-library.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#fastparse_2.11;0.3.4!fastparse_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.lihaoyi#fastparse-utils_2.11;0.3.4!fastparse-utils_2.11.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] com.novocode#junit-interface;0.10-M2!junit-interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] junit#junit-dep;4.10!junit-dep.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-tools.testing#test-interface;0.5!test-interface.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.hamcrest#hamcrest-core;1.1!hamcrest-core.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar[0m
-[0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.11.7/scala-library-2.11.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-library;2.11.7!scala-library.jar (352ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse_2.11/0.3.4/fastparse_2.11-0.3.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse_2.11;0.3.4!fastparse_2.11.jar (72ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/lihaoyi/fastparse-utils_2.11/0.3.4/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.lihaoyi#fastparse-utils_2.11;0.3.4!fastparse-utils_2.11.jar (49ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/com/novocode/junit-interface/0.10-M2/junit-interface-0.10-M2.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] com.novocode#junit-interface;0.10-M2!junit-interface.jar (49ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/junit/junit-dep/4.10/junit-dep-4.10.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] junit#junit-dep;4.10!junit-dep.jar (68ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-tools/testing/test-interface/0.5/test-interface-0.5.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-tools.testing#test-interface;0.5!test-interface.jar (48ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/hamcrest/hamcrest-core/1.1/hamcrest-core-1.1.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.hamcrest#hamcrest-core;1.1!hamcrest-core.jar (51ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.11.7/scala-compiler-2.11.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-compiler;2.11.7!scala-compiler.jar (1062ms)[0m
+[0m[[0mdebug[0m] [0m		tried https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
+[0m[[0minfo[0m] [0mdownloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar ...[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	public: downloading https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar.sha1[0m
+[0m[[0mdebug[0m] [0msha1 OK for https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.11.7/scala-reflect-2.11.7.jar[0m
+[0m[[0minfo[0m] [0m	[SUCCESSFUL ] org.scala-lang#scala-reflect;2.11.7!scala-reflect.jar (363ms)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-xml_2.11;1.0.4!scala-xml_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(bundle)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 176ms :: artifacts dl 10ms[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 compile produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 runtime produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 test produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 provided produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 optional produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 compile-internal produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 runtime-internal produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 test-internal produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 plugin produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 sources produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 docs produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 pom produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 scala-tool produced in /Users/prashantravi/Documents/workspace/Compiler/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (176ms resolve - 10ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1073ms :: artifacts dl 2145ms[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 compile produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 runtime produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 test produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 provided produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 optional produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 compile-internal produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 runtime-internal produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 test-internal produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 plugin produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 sources produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 docs produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 pom produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler_2.11;1.0 scala-tool produced in /u/antor/u7/ravi18/CS502/compiler/target/resolution-cache/reports/EPFL-l3-compiler_2.11-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1073ms resolve - 2145ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

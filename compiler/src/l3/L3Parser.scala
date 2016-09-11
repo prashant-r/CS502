@@ -175,67 +175,30 @@ object L3Parser {
   // Syntactic sugar translation.
   private def sFun(args: Seq[String], body: Tree)
                   (implicit p: Position): Tree = {
-     val frsh = freshName("fun")
-     LetRec(Seq(FunDef(frsh, args, body)), Ident(frsh))
+    val fName = freshName("fun")
+    LetRec(Seq(FunDef(fName, args, body)), Ident(fName))
   }
   private def sLet_*(bdgs: Seq[(String,Tree)], body: Tree)
                     (implicit p: Position): Tree =
- {
-   bdgs match{
-     case Seq() => (body)
-     case Seq(d, ds @ _*) => Let(Seq(d), sLet_*(ds, body))
-   }
- }
+    (bdgs :\ body)( (b, t) => Let(Seq(b), t))
   private def sBegin(exprs: Seq[Tree])(implicit p: Position): Tree =
-  {
-    exprs match {
-      case Seq(d) => d;
-      case Seq(d, ds @ _*) => (Let(Seq((freshName("begin"), d)), sBegin(ds)))  
-    }
-  }
+    exprs reduceRight { (e1, e2) => Let(Seq((freshName("begin"), e1)), e2) }
   private def sRec(name: String, bdgs: Seq[(String, Tree)], body: Tree)
                   (implicit p: Position) =
- {
-     LetRec(Seq(FunDef(name, bdgs map { _._1 }, body)), App(Ident(name), bdgs map { _._2 }))   
- }
-   
-  private def sAnd(es: Seq[Tree])(implicit p: Position): Tree = es match {
-    case Seq(d) => d;
-    case Seq(d, ds @ _*) => If( d, sAnd(ds), Lit(BooleanLit(false))); 
-    }
-  
-  private def sOr(es: Seq[Tree])(implicit p: Position): Tree = 
-  {
-    es match
-    {
-      case Seq(d) => d;
-      case Seq(d, ds @ _*) => 
-      {
-         val orName = freshName("or");
-         Let(Seq((orName, d)), If(Ident(orName), Ident(orName), sOr(ds))); 
-      }
-    }
-  }      
-  private def sNot(e: Tree)(implicit p: Position): Tree =
-     If( e, Lit(BooleanLit(false)), Lit(BooleanLit(true)));
-  private def sCond(clses: Seq[(Tree, Seq[Tree])])(implicit p: Position): Tree =
-  { 
-    clses match
-    {
-      case Seq() =>
-        Lit(UnitLit)
-      case Seq(current, continuation @ _*) => 
-      {
-        current match
-        {
-          case (s, d) =>
-          {
-              If(s, sBegin(d), sCond(continuation));    
-          }
-        }
-      }
+    LetRec(Seq(FunDef(name, bdgs map { _._1 }, body)),
+           App(Ident(name), bdgs map { _._2 }))
+  private def sAnd(es: Seq[Tree])(implicit p: Position): Tree =
+    es reduceRight { If(_, _, Lit(BooleanLit(false))) }
+  private def sOr(es: Seq[Tree])(implicit p: Position): Tree = {
+    es reduceRight { (e, r) =>
+      val en = freshName("or")
+      Let(Seq((en, e)), If(Ident(en), Ident(en), r))
     }
   }
+  private def sNot(e: Tree)(implicit p: Position): Tree =
+    If(e, Lit(BooleanLit(false)), Lit(BooleanLit(true)))
+  private def sCond(clses: Seq[(Tree, Seq[Tree])])(implicit p: Position): Tree =
+    (clses :\ (Lit(UnitLit) : Tree)){ case ((c, t), e) => If(c, sBegin(t), e) }
   private def sStringLit(s: String)(implicit p: Position): Tree = {
     val b = freshName("string")
     val cs = codePoints(s)

@@ -16,6 +16,9 @@ class L3DesugaringWhitebox extends L3Test {
     "(let ((v$1 1)) (let ((v$2 2)) #u))"
    )
 
+  "(let ((v$1 #u)) (Ident(v$1)))"
+  "#u"
+
   @Test def testSFun1 = testL3TreeEquality(
     "(fun (x) x)",
     "(letrec ((v$1 (fun (v$2) v$2))) v$1)"
@@ -74,10 +77,11 @@ class L3DesugaringWhitebox extends L3Test {
   @Test def testSOr = testL3TreeEquality(
     "(fun (x y) (or x y))",
     "(letrec ((v$1 (fun (v$2 v$3) (let ((v$4 v$2)) (if v$4 v$4 v$3))))) v$1)"
+    // "(letrec ((v$1 (fun (v$2 v$3) (if v$2 #t v$3)))) v$1)" <= a simpler desugaring
   )
 
   @Test def testSNot = testL3TreeEquality(
     "(fun (x) (not x))",
-     "(letrec ((v$1 (fun (v$2) (if v$2 #f #t)))) v$1)"
+    "(letrec ((v$1 (fun (v$2) (if v$2 #f #t)))) v$1)"
   )
 }

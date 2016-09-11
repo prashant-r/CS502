@@ -3,6 +3,7 @@ package l3
 import java.nio.file.FileSystems
 import fastparse.core.Parsed.{ Success, Failure }
 import CL3TreeFormatter._
+import CPSTreeFormatter._
 
 object Main extends MainHelper {
   def main(args: Array[String]): Unit = {
@@ -14,9 +15,13 @@ object Main extends MainHelper {
       L3Parser.parse(programText, indexToPos) match {
         case Success(program, _) =>
           val backEnd = (
-            /*treePrinter("Tree after desugaring")(NominalCL3TreeFormatter)
-              andThen*/ CL3NameAnalyzer
-              andThen CL3Interpreter
+            CL3NameAnalyzer
+              // andThen CL3Interpreter
+              andThen treePrinter("Tree in CL3")
+              andThen CL3ToCPSTranslator
+              andThen treePrinter("Tree in CPS")
+              andThen passThrough(SymbolicCPSTreeChecker)
+              andThen CPSInterpreterHigh
           )
           try {
             backEnd(program)

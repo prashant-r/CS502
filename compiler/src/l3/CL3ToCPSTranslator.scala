@@ -15,60 +15,49 @@ object CL3ToCPSTranslator extends (S.Tree => C.Tree) {
 
     // @unchecked to avoid bogus compiler warnings
     (tree: @unchecked) match {
-      
-      case S.Let(Seq(), body) =>
-        nonTail(body)(ctx)
-      
       case S.Let((name, value) +: rest, body) =>
         nonTail(value)(v =>
           C.LetP(name, L3Id, Seq(v), nonTail(S.Let(rest, body))(ctx)))
-      
-      case S.LetRec(funcs, body) => {
-            C.LetF(funcs.map(f => {
-              val c = Symbol.fresh("continuation")
-              C.FunDef(f.name, c, f.args, tail(f.body, c))
-            }), nonTail(body)(ctx))
-      }
-      
-       case S.App(funcs, args) => {
-        nonTail(funcs)(eHole => {nonTail_*(args)(lambdaHole2 => {
-            val retVal = Symbol.fresh("returnVal")
-            (tempLetC("contextContinue", Seq(retVal), ctx(retVal))(returnContinuation => C.AppF(eHole, returnContinuation, lambdaHole2)))
-          })
-        })
-      }
-      
-      case S.Prim(testPrimitive: L3TestPrimitive, args:Seq[S.Tree]) =>
-        nonTail(S.If((S.Prim(testPrimitive, args)), S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false))))(ctx)
-        
-      
-      case S.If(condE: S.Tree, thenE: S.Tree, elseE: S.Tree) =>{
+
+      case S.Let(Seq(), body) =>
+        nonTail(body)(ctx)
+
+      case S.LetRec(functions, body) =>
+        val funDefs = functions map { f =>
+          val rc = Symbol.fresh("rc")
+          C.FunDef(f.name, rc, f.args, tail(f.body, rc))
+        }
+        C.LetF(funDefs, nonTail(body)(ctx))
+
+      case S.If(condE, thenE, elseE) =>
+        val v = Symbol.fresh("v")
+        tempLetC("ic", Seq(v), ctx(v))(ic =>
+          tempLetC("tc", Seq(), tail(thenE, ic))(tc =>
+            tempLetC("fc", Seq(), tail(elseE, ic))(fc =>
+              cond(condE, tc, fc))))
+
+      case S.App(fun, args) =>
         val r = Symbol.fresh("r")
-        tempLetC("cOuter", Seq(r), ctx(r))(cOuter => {
-            tempLetC("cTrueBranch", Seq(), tail(thenE, cOuter))(cTrueBranch=>{
-                tempLetC("cFalseBranch", Seq(), tail(elseE, cOuter))(cFalseBranch =>{
-                    cond(condE, cTrueBranch, cFalseBranch);
-                })
-              })
-            })         
-      }
-      
-     
-      case S.Prim(valuePrimitive: L3ValuePrimitive, args:Seq[S.Tree]) =>{
-         val n = Symbol.fresh("vP")
-         nonTail_*(args)(tempVar=>C.LetP(n,valuePrimitive,tempVar,ctx(n)))
-      }
-      
-      case S.Halt(arg:S.Tree) => {
-        nonTail(arg)( haltResult 
-            =>C.Halt(haltResult))
-      }
-      case S.Ident(envVarName) => ctx(envVarName)
-      
-      case S.Lit(value: CL3Literal) =>{
-        val name = Symbol.fresh("Lit")
-        C.LetL(name, value, ctx(name))
-      }
+        nonTail(fun)(f =>
+          nonTail_*(args)(as =>
+            tempLetC("rc", Seq(r), ctx(r))(rc => C.AppF(f, rc, as))))
+
+      case t @ S.Prim(prim: L3TestPrimitive, _) =>
+        nonTail(S.If(t, S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false))))(ctx)
+
+      case S.Prim(prim: L3ValuePrimitive, args) =>
+        val v = Symbol.fresh("v")
+        nonTail_*(args)(as => C.LetP(v, prim, as, ctx(v)))
+
+      case S.Halt(arg) =>
+        nonTail(arg)(C.Halt(_))
+
+      case S.Ident(name) =>
+        ctx(name)
+
+      case S.Lit(value) =>
+        val i = Symbol.fresh("i")
+        C.LetL(i, value, ctx(i))
     }
   }
 
@@ -82,58 +71,47 @@ object CL3ToCPSTranslator extends (S.Tree => C.Tree) {
 
   private def tail(tree: S.Tree, c: Symbol): C.Tree = {
     implicit val pos = tree.pos
+
+    // @unchecked to avoid bogus compiler warnings
     (tree: @unchecked) match {
-      
-      case S.Halt(argument) => {
-        tail(argument,c)
-      }
-     
-      case S.Ident(name) => C.AppC(c,Seq(name))
-      
       case S.Let((name, value) +: rest, body) =>
         nonTail(value)(v =>
           C.LetP(name, L3Id, Seq(v), tail(S.Let(rest, body), c)))
-      
-      case S.App(fun: S.Tree, args: Seq[S.Tree]) =>{
-        nonTail(fun)(
-            funcName => {nonTail_*(args)(
-                holesName => {
-                    C.AppF(funcName, c, holesName)
-          })
-        })
-       }
-      case S.If(condE: S.Tree, thenE: S.Tree, elseE: S.Tree) => {
-        tempLetC("cTrue", Seq(), tail(thenE, c))(cTrueBranch=>{
-            tempLetC("cFalse", Seq(), tail(elseE, c))(cFalseBranch =>{
-                cond(condE, cTrueBranch, cFalseBranch);
-           })
-         })
-      }  
-      case S.Prim(testPrimitive: L3TestPrimitive, args:Seq[S.Tree]) => {     
-        tail(S.If((S.Prim(testPrimitive, args)), S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false))),c)
-      }
-      
+
       case S.Let(Seq(), body) =>
         tail(body, c)
 
-      case S.LetRec(funcs, body) => {
-        C.LetF(funcs.map(f => {
-          
-        val funcCont = Symbol.fresh("FreshFunctionCont")
-        C.FunDef(f.name, funcCont, f.args, tail(f.body, funcCont))
-        }), tail(body,c))
-      } 
-       
-      case S.Prim(valuePrimitive: L3ValuePrimitive, args:Seq[S.Tree]) => {
-        val valP = Symbol.fresh("valuePrimitive")
-        nonTail_*(args)(arguments => {
-          C.LetP(valP, valuePrimitive, arguments, C.AppC(c, Seq(valP)))})
-      }
-      
-      case S.Lit(litVal) =>{
-        val lit = Symbol.fresh("Lit")
-        C.LetL(lit, litVal, C.AppC(c, Seq(lit)))
-      }
+      case S.LetRec(functions, body) =>
+        val funDefs = functions map { f =>
+          val rc = Symbol.fresh("rc")
+          C.FunDef(f.name, rc, f.args, tail(f.body, rc))
+        }
+        C.LetF(funDefs, tail(body, c))
+
+      case S.If(condE, thenE, elseE) =>
+        tempLetC("tc", Seq(), tail(thenE, c))(tc =>
+          tempLetC("fc", Seq(), tail(elseE, c))(fc =>
+            cond(condE, tc, fc)))
+
+      case S.App(fun, args) =>
+        nonTail(fun)(f => nonTail_*(args)(as => C.AppF(f, c, as)))
+
+      case t @ S.Prim(prim: L3TestPrimitive, _) =>
+        tail(S.If(t, S.Lit(BooleanLit(true)), S.Lit(BooleanLit(false))), c)
+
+      case S.Prim(prim: L3ValuePrimitive, args) =>
+        val v = Symbol.fresh("v")
+        nonTail_*(args)(as => C.LetP(v, prim, as, C.AppC(c, Seq(v))))
+
+      case S.Halt(arg) =>
+        nonTail(arg)(C.Halt(_))
+
+      case S.Ident(name) =>
+        C.AppC(c, Seq(name))
+
+      case S.Lit(value) =>
+        val i = Symbol.fresh("i")
+        C.LetL(i, value, C.AppC(c, Seq(i)))
     }
   }
 
@@ -145,26 +123,23 @@ object CL3ToCPSTranslator extends (S.Tree => C.Tree) {
 
     tree match {
       case S.If(condE, S.Lit(tl), S.Lit(fl)) =>
-      {
         cond(condE, litToCont(tl), litToCont(fl))
-      }
-      case S.If(cond1, cond2, S.Lit(f1)) =>
-      {
-         tempLetC("ac", Seq(), cond(cond2,trueC,falseC))(aC =>cond(cond1,aC,litToCont(f1)))
-      }
-      case S.If(cond1,S.Lit(t1), cond2) =>
-      {
-         tempLetC("ac", Seq(), cond(cond2,trueC,falseC))(aC =>cond(cond1,litToCont(t1), aC))
-      }
-      
+
+      case S.If(condE, thenE, S.Lit(l)) =>
+        tempLetC("tc", Seq(), cond(thenE, trueC, falseC))(tc =>
+          cond(condE, tc, litToCont(l)))
+
+      case S.If(condE, S.Lit(l), elseE) =>
+        tempLetC("ec", Seq(), cond(elseE, trueC, falseC))(ec =>
+          cond(condE, litToCont(l), ec))
+
       case S.Prim(p: L3TestPrimitive, args) =>
         nonTail_*(args)(as => C.If(p, as, trueC, falseC))
 
-      case other =>{
+      case other =>
         nonTail(other)(o =>
           nonTail(S.Lit(BooleanLit(false)))(n =>
             C.If(L3Ne, Seq(o, n), trueC, falseC)))
-      }
     }
   }
 

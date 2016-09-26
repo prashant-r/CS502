@@ -16,9 +16,6 @@ class L3DesugaringWhitebox extends L3Test {
     "(let ((v$1 1)) (let ((v$2 2)) #u))"
    )
 
-  "(let ((v$1 #u)) (Ident(v$1)))"
-  "#u"
-
   @Test def testSFun1 = testL3TreeEquality(
     "(fun (x) x)",
     "(letrec ((v$1 (fun (v$2) v$2))) v$1)"

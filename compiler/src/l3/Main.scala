@@ -16,12 +16,15 @@ object Main extends MainHelper {
         case Success(program, _) =>
           val backEnd = (
             CL3NameAnalyzer
-              // andThen CL3Interpreter
               andThen treePrinter("Tree in CL3")
+              // andThen CL3Interpreter
               andThen CL3ToCPSTranslator
               andThen treePrinter("Tree in CPS")
-              andThen passThrough(SymbolicCPSTreeChecker)
-              andThen CPSInterpreterHigh
+              // andThen CPSInterpreterHigh
+              andThen CPSValueRepresenter
+              andThen CPSHoister
+              andThen treePrinter("---------- after hoisting")
+              andThen CPSInterpreterLow
           )
           try {
             backEnd(program)

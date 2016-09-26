@@ -4,7 +4,7 @@
 		module="l3-compiler$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160906221242"
+		publication="20160925192731"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
@@ -46,11 +46,6 @@
 		</dependency>
 		<dependency org="org.hamcrest" name="hamcrest-core" rev="1.1" transitive="false" conf="test->default(compile);test-internal->default(compile)">
 			<artifact name="hamcrest-core" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="hamcrest-core" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
-		</dependency>
-		<dependency org="org.scala-tools.testing" name="test-interface" rev="0.5" transitive="false" conf="test->default(compile);test-internal->default(compile)">
-			<artifact name="test-interface" type="src" ext="jar" conf="sources" e:classifier="sources"/>
-			<artifact name="test-interface" type="doc" ext="jar" conf="docs" e:classifier="javadoc"/>
 		</dependency>
 		<dependency org="org.scala-lang" name="scala-compiler" rev="2.11.7" transitive="false" conf="scala-tool->default(compile)">
 			<artifact name="scala-compiler" type="src" ext="jar" conf="sources" e:classifier="sources"/>

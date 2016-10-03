@@ -16,7 +16,28 @@ import l3.{ SymbolicCPSTreeModuleLow => L }
 object CPSValueRepresenter extends (H.Tree => L.Tree) {
   def apply(tree: H.Tree): L.Tree =
     transform(tree)(Map.empty)
-
+  
+    
+  private def sLetL_*(bdgs: Seq[(L.Name,L.Literal)], body: L.Tree)
+                    (implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
+  {
+    (bdgs :\ body)( (b, t) => {b match {
+        case Seq((en, e))=>
+          L.LetL(en.asInstanceOf[L.Name], e.asInstanceOf[L.Literal], t)
+      }
+    })
+  }
+  
+  private def sLetP_*(bdgs: Seq[(L.Name,L.ValuePrimitive, Seq[L.Name])], body : L.Tree) (implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
+  {
+     (bdgs :\ body)( (b, t) => {b match {
+        case Seq((en,v, e))=>
+          L.LetP(en.asInstanceOf[L.Name], v.asInstanceOf[L.ValuePrimitive], e.asInstanceOf[Seq[L.Name]], t)
+      }
+    })
+  }
+  
+    
   private def transform(tree: H.Tree)(implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree = tree match {
     
  //---------------------------------------------------------------------- 
@@ -24,14 +45,44 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
  //----------------------------------------------------------------------   
     case H.LetF(funs, body) =>
     {
-      L.LetF(funs.map(a_function =>
-        a_function match {
-          case H.FunDef(funs_name, funs_retC, funs_args, funs_body) =>
-            {
-              L.FunDef(funs_name, funs_retC, funs_args, transform(funs_body))
+               
+          // close functions
+          val closedFunction = funs.map{ function => 
+          {
+          
+              val w1 = Symbol.fresh("w1")
+              val env1 = Symbol.fresh("env1")
+
+              function match 
+              {
+                case H.FunDef(fname, fretC, fargs, fbody) =>
+                  {
+                    val addEnvironmentToArgs = Seq(env1) ++ fargs
+                    
+                    val v1 = Symbol.fresh("v1")
+                    
+                    tempLetL(1) { c1 =>
+                    
+                      
+                    val SequenceOfFroms =   
+                      
+                    sLetP_*()
+                    transform(fbody.subst(Substitution(SequenceOfFroms, SequenceOfTos)))
+                   
+                    L.FunDef(w1, retC, addEnvironmentToArgs,  
+                        
+                    }
+                  }
+              }
             }
-        }), transform(body))
-    }
+          }
+    } 
+          
+          
+          
+          
+          
+          //closureAllocInit(funs, body));
    
     case H.AppF(fun, retC, args) =>
     {
@@ -397,27 +448,25 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
                            (implicit worker: Map[Symbol, Set[Symbol]])
       : Set[Symbol] = tree match {
     case H.LetL(name, _, body) =>
-      freeVariables(body) - name
+      freeVariables(body) - name   // F[e] \ { n } 
 
     case H.LetP(name, p, args, body) =>
-      freeVariables(body) - name ++ args
+      freeVariables(body) - name ++ args  //(F[e] \ { n }) ∪ { n1, … }
     
     case H.LetC(cnts, body) =>
-//        val cntsFV = cnts map {c => freeVariables(c.body) -- c.args}
-        freeVariables(body) ++ (cnts map {c => freeVariables(c.body) -- c.args}).flatten
+        freeVariables(body) ++ (cnts flatMap {c => freeVariables(c.body) -- c.args})
     
     case H.LetF(funs, body) =>
-      (freeVariables(body) ++ (funs map{f => freeVariables(f.body) -- f.args}).flatten) -- (funs map{f => f.name}).flatten
+      freeVariables(body) ++ (funs flatMap {f => freeVariables(f.body) -- f.args}) -- (funs flatMap {f => f.name})
     
     case H.AppC(cntName, args) =>
       args.toSet
     
     case H.AppF(funName, retC, args) =>
-     args.toSet + funName
+      args.toSet + funName
       
     case H.If(cond, args, thenC, elseC) =>
       args.toSet
-    //TODO: handle other cases
   }
 
   private def freeVariables(cnt: H.CntDef)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] =
@@ -482,5 +531,5 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           L.If(CPSEq, Seq(r, t), tC, eC)
         }
       }
-    }
+    } 
 }

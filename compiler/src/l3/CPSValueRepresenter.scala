@@ -311,19 +311,10 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     }
 
     case H.LetP(name, L3ByteWrite, Seq(a), body) => {
-      tempLetP(CPSByteWrite, Seq(a)) { t1 =>
-        {
-          tempLetL(1) { c1 =>
-            {
-              tempLetP(CPSArithShiftL, Seq(t1, c1)) { t2 =>
-                {
-                  L.LetP(name, CPSAdd, Seq(t2, c1), transform(body))
-                }
-              }
-
-            }
-          }
-        }
+      tempLetL(1){c1 =>
+         tempLetP(CPSArithShiftR, Seq(a,c1)){shiftedVal =>
+            L.LetP(name, CPSByteWrite, Seq(shiftedVal), transform(body)) 
+         }
       }
     }
 
@@ -402,10 +393,30 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       }
   }
 
-  private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
+   private def freeVariables(tree: H.Tree)
+                           (implicit worker: Map[Symbol, Set[Symbol]])
+      : Set[Symbol] = tree match {
     case H.LetL(name, _, body) =>
       freeVariables(body) - name
 
+    case H.LetP(name, p, args, body) =>
+      freeVariables(body) - name ++ args
+    
+    case H.LetC(cnts, body) =>
+//        val cntsFV = cnts map {c => freeVariables(c.body) -- c.args}
+        freeVariables(body) ++ (cnts map {c => freeVariables(c.body) -- c.args}).flatten
+    
+    case H.LetF(funs, body) =>
+      (freeVariables(body) ++ (funs map{f => freeVariables(f.body) -- f.args}).flatten) -- (funs map{f => f.name}).flatten
+    
+    case H.AppC(cntName, args) =>
+      args.toSet
+    
+    case H.AppF(funName, retC, args) =>
+     args.toSet + funName
+      
+    case H.If(cond, args, thenC, elseC) =>
+      args.toSet
     //TODO: handle other cases
   }
 

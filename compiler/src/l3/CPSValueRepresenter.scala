@@ -14,6 +14,13 @@ import l3.{ SymbolicCPSTreeModuleLow => L }
  */
 
 object CPSValueRepresenter extends (H.Tree => L.Tree) {
+
+  
+  var collectKVBdgs :Seq[(L.Name, L.Literal)] = Seq();
+  
+  def resetCollectKVBdgs() =
+    collectKVBdgs = Seq()
+    
   def apply(tree: H.Tree): L.Tree =
     transform(tree)(Map.empty)
   
@@ -43,46 +50,90 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
  //---------------------------------------------------------------------- 
     // Function abstraction, definition and application
  //----------------------------------------------------------------------   
-    case H.LetF(funs, body) =>
-    {
-               
-          // close functions
-          val closedFunction = funs.map{ function => 
-          {
-          
-              val w1 = Symbol.fresh("w1")
-              val env1 = Symbol.fresh("env1")
+   case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
 
-              function match 
-              {
-                case H.FunDef(fname, fretC, fargs, fbody) =>
-                  {
-                    val addEnvironmentToArgs = Seq(env1) ++ fargs
-                    
-                    val v1 = Symbol.fresh("v1")
-                    
-                    tempLetL(1) { c1 =>
-                    
-                      
-                    val SequenceOfFroms =   
-                      
-                    sLetP_*()
-                    transform(fbody.subst(Substitution(SequenceOfFroms, SequenceOfTos)))
-                   
-                    L.FunDef(w1, retC, addEnvironmentToArgs,  
-                        
-                    }
-                  }
-              }
-            }
+      val convertedFunctions: Seq[L.FunDef] = funs map { input =>
+        {
+          resetCollectKVBdgs();  
+          val w1 = Symbol.fresh("worker_name")
+          val env1 = Symbol.fresh("environ")
+          L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
+          val arg_count = input.args.size
+          val i = 1
+          var x = 1
+          val vees: Seq[L.Name] = Seq()
+          val pBdgs: Seq[(L.Name,L.ValuePrimitive, Seq[L.Name])] = Seq()
+          for (x <- 1 to arg_count) {
+            val v1 = Symbol.fresh("interior_v1")
+            
+            val x_name = Symbol.fresh("x_s_name")
+            collectKVBdgs ++ Seq((x_name, x))
+           
+            pBdgs :+ Seq((v1, CPSBlockGet, Seq(env1, x_name))) 
+            vees :+ v1
           }
-    } 
+          val image = Seq(env1) ++ vees
+          val preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) -- (Seq(input.name) ++ input.args))
+         
+          
+          sLetP_*(pBdgs, transform(input.body.subst(Substitution(preimage, image))))})}}
+      
+      sLetL_*( collectKVBdgs: Seq[(L.Name, L.Literal)]  ,
+          
+          
+          // You were about to write the let* part after this bruh
+          // the top part is good to go
           
           
           
+          L.LetF(convertedFunctions: Seq[L.FunDef], {
+              
+            val b_tag = 202
+//          val super_arg_count = arg_count + 1
+//          
+//          val super_arg_count_name = Symbol.fresh("super_arg_count_s_name")
+//          collectKVBdgs ++ Seq((super_arg_count_name, super_arg_count))
+//          L.LetP(input.name, CPSBlockAlloc(b_tag), Seq(super_arg_count_name), {
+//           
+//            val yy = 0
+//            val tt = Symbol.fresh("another_t")
+//            val yy_is0_count_name = Symbol.fresh("yy_is0_count_name")
+//            
+//            val block_set_seqs = Seq((tt, CPSBlockSet, Seq(input.name, yy, w1)))
+//            for (yy <- 1 to arg_count) {
+//              val t1 = Symbol.fresh("let_star_t1")
+//             
+//              collectKVBdgs ++ Seq((yy_isXincrement_count_name, yy))
+//         
+//              block_set_seqs :+ Seq((t1, CPSBlockSet, Seq(input.name, yy_isXincrement_count_name, preimage(yy))))
+//            }
+//
+//            sLetP_*(block_set_seqs.asInstanceOf[Seq[(L.Name, CPSValuePrimitive, Seq[L.Name])]],))))
+//          })
+            
+            
+            
+          })
+          
+      
+      
+        {
+        
+      
+      
+        }
+      
+      )
+        }
+   
+          
+   
+   
+   }
           
           
-          //closureAllocInit(funs, body));
+      
+
    
     case H.AppF(fun, retC, args) =>
     {
@@ -443,7 +494,8 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
         }
       }
   }
-
+  
+  
    private def freeVariables(tree: H.Tree)
                            (implicit worker: Map[Symbol, Set[Symbol]])
       : Set[Symbol] = tree match {

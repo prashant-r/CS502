@@ -23,4 +23,6 @@ class CPSValueRepresentation_Whitebox extends CPSLowTest {
         |       (v$8 (@>> v$6 v$7)))
         |  (halt v$8))""".stripMargin)
         
+       
+        
 }

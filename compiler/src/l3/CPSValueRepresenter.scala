@@ -15,138 +15,127 @@ import l3.{ SymbolicCPSTreeModuleLow => L }
 
 object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
-  
-  var collectKVBdgs :Seq[(L.Name, L.Literal)] = Seq();
-  
+  var collectKVBdgs: Seq[(L.Name, L.Literal)] = Seq();
+
   def resetCollectKVBdgs() =
     collectKVBdgs = Seq()
-    
+
   def apply(tree: H.Tree): L.Tree =
     transform(tree)(Map.empty)
-  
-    
-  private def sLetL_*(bdgs: Seq[(L.Name,L.Literal)], body: L.Tree)
-                    (implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
-  {
-    (bdgs :\ body)( (b, t) => {b match {
-        case Seq((en, e))=>
-          L.LetL(en.asInstanceOf[L.Name], e.asInstanceOf[L.Literal], t)
-      }
-    })
-  }
-  
-  private def sLetP_*(bdgs: Seq[(L.Name,L.ValuePrimitive, Seq[L.Name])], body : L.Tree) (implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
-  {
-     (bdgs :\ body)( (b, t) => {b match {
-        case Seq((en,v, e))=>
-          L.LetP(en.asInstanceOf[L.Name], v.asInstanceOf[L.ValuePrimitive], e.asInstanceOf[Seq[L.Name]], t)
-      }
-    })
-  }
-  
-    
-  private def transform(tree: H.Tree)(implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree = tree match {
-    
- //---------------------------------------------------------------------- 
-    // Function abstraction, definition and application
- //----------------------------------------------------------------------   
-   case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
 
-      val convertedFunctions: Seq[L.FunDef] = funs map { input =>
+  private def sLetL_*(bdgs: Seq[(L.Name, L.Literal)], body: L.Tree)(implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
+    {
+      (bdgs :\ body)((b, t) => {
+        b match {
+          case (en, e) =>
+            L.LetL(en.asInstanceOf[L.Name], e.asInstanceOf[L.Literal], t)
+        }
+      })
+    }
+
+  private def sLetP_*(bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])], body: L.Tree)(implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree =
+    {
+      (bdgs :\ body)((b, t) => {
+        b match {
+          case (en, v, e) =>
+            L.LetP(en.asInstanceOf[L.Name], v.asInstanceOf[L.ValuePrimitive], e.asInstanceOf[Seq[L.Name]], t)
+        }
+      })
+    }
+
+  private def transform(tree: H.Tree)(implicit worker: Map[Symbol, (Symbol, Seq[Symbol])]): L.Tree = tree match {
+
+    //---------------------------------------------------------------------- 
+    // Function abstraction, definition and application
+    //----------------------------------------------------------------------   
+    case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
+
+      val convertedFunctions = funs map { input =>
         {
-          resetCollectKVBdgs();  
+          resetCollectKVBdgs();
           val w1 = Symbol.fresh("worker_name")
           val env1 = Symbol.fresh("environ")
-          L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
-          val arg_count = input.args.size
-          val i = 1
-          var x = 1
-          val vees: Seq[L.Name] = Seq()
-          val pBdgs: Seq[(L.Name,L.ValuePrimitive, Seq[L.Name])] = Seq()
-          for (x <- 1 to arg_count) {
-            val v1 = Symbol.fresh("interior_v1")
-            
-            val x_name = Symbol.fresh("x_s_name")
-            collectKVBdgs ++ Seq((x_name, x))
-           
-            pBdgs :+ Seq((v1, CPSBlockGet, Seq(env1, x_name))) 
-            vees :+ v1
-          }
-          val image = Seq(env1) ++ vees
-          val preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) -- (Seq(input.name) ++ input.args))
-         
-          
-          sLetP_*(pBdgs, transform(input.body.subst(Substitution(preimage, image))))})}}
-      
-      sLetL_*( collectKVBdgs: Seq[(L.Name, L.Literal)]  ,
-          
-          
-          // You were about to write the let* part after this bruh
-          // the top part is good to go
-          
-          
-          
-          L.LetF(convertedFunctions: Seq[L.FunDef], {
-              
-            val b_tag = 202
-//          val super_arg_count = arg_count + 1
-//          
-//          val super_arg_count_name = Symbol.fresh("super_arg_count_s_name")
-//          collectKVBdgs ++ Seq((super_arg_count_name, super_arg_count))
-//          L.LetP(input.name, CPSBlockAlloc(b_tag), Seq(super_arg_count_name), {
-//           
-//            val yy = 0
-//            val tt = Symbol.fresh("another_t")
-//            val yy_is0_count_name = Symbol.fresh("yy_is0_count_name")
-//            
-//            val block_set_seqs = Seq((tt, CPSBlockSet, Seq(input.name, yy, w1)))
-//            for (yy <- 1 to arg_count) {
-//              val t1 = Symbol.fresh("let_star_t1")
-//             
-//              collectKVBdgs ++ Seq((yy_isXincrement_count_name, yy))
-//         
-//              block_set_seqs :+ Seq((t1, CPSBlockSet, Seq(input.name, yy_isXincrement_count_name, preimage(yy))))
-//            }
-//
-//            sLetP_*(block_set_seqs.asInstanceOf[Seq[(L.Name, CPSValuePrimitive, Seq[L.Name])]],))))
-//          })
-            
-            
-            
-          })
-          
-      
-      
-        {
-        
-      
-      
-        }
-      
-      )
-        }
-   
-          
-   
-   
-   }
-          
-          
-      
+                 
+          var preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) -- (Seq(input.name) ++ input.args))
 
-   
-    case H.AppF(fun, retC, args) =>
-    {
-       val f = Symbol.fresh("f__appf_namespace")
-       tempLetL(0) { c1 =>
-         L.LetP(f, CPSBlockGet, List(fun, c1), L.AppF(f, retC, Seq(fun) ++ args))
+          (L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
+            val arg_count = input.args.size
+            
+            //println("Arg count is" );
+            //println(arg_count);
+            
+            var x = 1
+            var vees: Seq[L.Name] = Seq()
+            var pBdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq()
+            for (x <- 1 to preimage.size -1) {
+              val v1 = Symbol.fresh("interior_v1")
+              
+              val x_name = Symbol.fresh("x_s_name")
+              collectKVBdgs = collectKVBdgs ++ Seq((x_name, x))
+              pBdgs = pBdgs ++ Seq((v1, CPSBlockGet, Seq(env1, x_name)))
+              vees = vees ++ Seq(v1)
+            }
+            var image = Seq(env1) ++ vees
+         
+             
+            
+            
+            sLetP_*(pBdgs, transform(input.body.subst(Substitution(preimage, image))))
+          }), preimage)
         }
-    } 
+      }
+
+      val all_bdgs = {
+        var balloc_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq()
+        var bset_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq()
+        val dummy_ret = convertedFunctions map { e1 =>
+          {
+            var fun_ext = e1._1
+            var pimgworker = e1._2
+            
+            val btag = 202
+            val fv_num = Symbol.fresh("fv_numberrraavvvi")
+            collectKVBdgs = collectKVBdgs ++ Seq((fv_num, fun_ext.args.size))
+            
+            balloc_bdgs = balloc_bdgs ++ Seq((pimgworker(0), CPSBlockAlloc(btag), Seq(fv_num)))
+            
+            val func_args_size = pimgworker.size - 1
+            var xi = 0
+            val name_zero_t1 = Symbol.fresh("block_set_zero")
+            val t1_zero = Symbol.fresh("zero_name")
+            collectKVBdgs = collectKVBdgs ++ Seq((t1_zero, xi))
+            bset_bdgs = bset_bdgs ++ Seq((name_zero_t1, CPSBlockSet, Seq(pimgworker(0), t1_zero, fun_ext.name)))
+
+            for (xi <- 1 to func_args_size) {
+              val new_t1 = Symbol.fresh("block_set_wrapper")
+              val name_int_t1 = Symbol.fresh("block_set_int")
+              collectKVBdgs = collectKVBdgs ++ Seq((name_int_t1, xi))
+              bset_bdgs = bset_bdgs ++ Seq((new_t1, CPSBlockSet, Seq(pimgworker(0), name_int_t1, pimgworker(xi))))
+            }
+          }
+        }
+        var tot_bdgs = balloc_bdgs ++ bset_bdgs
+        tot_bdgs
+      }
+      sLetL_*(collectKVBdgs: Seq[(L.Name, L.Literal)],
+        L.LetF(convertedFunctions map { e1 => e1._1 }, {
+          sLetP_*(all_bdgs, transform(body))
+        }))
+
+    }
+
+    case H.AppF(fun, retC, args) =>
+      {
+        val f = Symbol.fresh("f__appf_namespace")
+        tempLetL(0) { c1 =>
+          L.LetP(f, CPSBlockGet, Seq(fun, c1), L.AppF(f, retC, Seq(fun) ++ args))
+        }
+      }    
     
-//----------------------------------------------------------------------    
+    //----------------------------------------------------------------------    
     // Representing Literals
-//----------------------------------------------------------------------
-    
+    //----------------------------------------------------------------------
+
     case H.LetL(name, IntLit(value), body) =>
       L.LetL(name, (value << 1) | 1, transform(body))
 
@@ -161,11 +150,11 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     case H.LetL(name, UnitLit, body) =>
       L.LetL(name, bitsToIntMSBF(0, 0, 1, 0), transform(body))
-      
-//----------------------------------------------------------------------    
+
+    //----------------------------------------------------------------------    
     // Representing Primitives   
-//---------------------------------------------------------------------- 
-      
+    //---------------------------------------------------------------------- 
+
     case H.LetP(name, L3IntAdd, args, body) =>
       tempLetP(CPSAdd, args) { r =>
         tempLetL(1) { c1 =>
@@ -260,84 +249,74 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           }
 
       }
-    
+
     case H.LetP(name, L3IntArithShiftRight, args, body) =>
       args match {
-          case Seq(n1, n2) =>
-            {
-              tempLetL(1) {
-                ns1 =>
-                  {
-                     tempLetP(CPSSub, Seq(n1, ns1)) {
-                         
-                         thisIsFirstArgument =>
-                           {
-                             tempLetP(CPSArithShiftR, Seq(n2, ns1)) {
-                                 thisIsSecondArgument =>
-                                   {
-                                       tempLetP(CPSArithShiftR, Seq(thisIsFirstArgument, thisIsSecondArgument)) { last_val =>
-                                          L.LetP(name, CPSAdd, Seq(last_val, ns1), transform(body))
-                                       }
-                                   }
-                             }
-                           }
-                       
-                     }
+        case Seq(n1, n2) =>
+          {
+            tempLetL(1) {
+              ns1 =>
+                {
+                  tempLetP(CPSSub, Seq(n1, ns1)) {
+
+                    thisIsFirstArgument =>
+                      {
+                        tempLetP(CPSArithShiftR, Seq(n2, ns1)) {
+                          thisIsSecondArgument =>
+                            {
+                              tempLetP(CPSArithShiftR, Seq(thisIsFirstArgument, thisIsSecondArgument)) { last_val =>
+                                L.LetP(name, CPSAdd, Seq(last_val, ns1), transform(body))
+                              }
+                            }
+                        }
+                      }
+
                   }
-              }
+                }
             }
+          }
       }
-      
+
     case H.LetP(name, L3IntArithShiftLeft, args, body) =>
       args match {
-          case Seq(n1, n2) =>
-            {
-              tempLetL(1) {
-                ns1 =>
-                  {
-                     tempLetP(CPSSub, Seq(n1, ns1)) {
-                         
-                         thisIsFirstArgument =>
-                           {
-                             tempLetP(CPSArithShiftR, Seq(n2, ns1)) {
-                                 thisIsSecondArgument =>
-                                   {
-                                       tempLetP(CPSArithShiftL, Seq(thisIsFirstArgument, thisIsSecondArgument)) { last_val =>
-                                          L.LetP(name, CPSAdd, Seq(last_val, ns1), transform(body))
-                                       }
-                                   }
-                             }
-                           }
-                       
-                     }
+        case Seq(n1, n2) =>
+          {
+            tempLetL(1) {
+              ns1 =>
+                {
+                  tempLetP(CPSSub, Seq(n1, ns1)) {
+
+                    thisIsFirstArgument =>
+                      {
+                        tempLetP(CPSArithShiftR, Seq(n2, ns1)) {
+                          thisIsSecondArgument =>
+                            {
+                              tempLetP(CPSArithShiftL, Seq(thisIsFirstArgument, thisIsSecondArgument)) { last_val =>
+                                L.LetP(name, CPSAdd, Seq(last_val, ns1), transform(body))
+                              }
+                            }
+                        }
+                      }
+
                   }
-              }
+                }
             }
-      }  
-      
-      
+          }
+      }
+
     case H.LetP(name, L3IntBitwiseAnd, args, body) =>
-        args match {
-          case Seq(n1, n2) =>
-             L.LetP(name, CPSAnd, Seq(n1, n2), transform(body))
-        }
+       L.LetP(name, CPSAnd, args, transform(body))
 
     case H.LetP(name, L3IntBitwiseOr, args, body) =>
-      args match {
-          case Seq(n1, n2) =>
-             L.LetP(name, CPSOr, Seq(n1, n2), transform(body))
-        }
-
+       L.LetP(name, CPSOr, args, transform(body))
+      
     case H.LetP(name, L3IntBitwiseXOr, args, body) =>
-      args match {
-          case Seq(n1, n2) =>
-             L.LetP(name, CPSXOr, Seq(n1, n2), transform(body))
-        }
-      
-//----------------------------------------------------------------------     
+       L.LetP(name, CPSXOr, args , transform(body))
+     
+    //----------------------------------------------------------------------     
     // other integer comparison primitives similar
-//----------------------------------------------------------------------
-      
+    //----------------------------------------------------------------------
+
     case H.If(L3IntLt, args, thenC, elseC) =>
       L.If(CPSLt, args, thenC, elseC)
 
@@ -349,19 +328,16 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
     case H.If(L3IntGe, args, thenC, elseC) =>
       L.If(CPSGe, args, thenC, elseC)
-    
+
     case H.If(L3Eq, args, thenC, elseC) =>
       L.If(CPSEq, args, thenC, elseC)
-      
+
     case H.If(L3Ne, args, thenC, elseC) =>
       L.If(CPSNe, args, thenC, elseC)
 
-      
-      
-//----------------------------------------------------------------------
+    //----------------------------------------------------------------------
     // Block primitive types
-//----------------------------------------------------------------------
-      
+    //----------------------------------------------------------------------
     case H.LetP(name, L3BlockAlloc(tag), Seq(a), body) =>
       tempLetL(1) { c1 =>
         tempLetP(CPSArithShiftR, Seq(a, c1)) { t1 =>
@@ -380,21 +356,35 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     }
 
     case H.LetP(name, L3BlockLength, Seq(a), body) => {
-      L.LetP(name, CPSBlockLength, Seq(a), transform(body))
+      tempLetL(1) { c1 =>
+        tempLetP(CPSBlockLength, Seq(a)) { cps_len =>
+          tempLetP(CPSArithShiftL, Seq(cps_len, c1)) { ext_len =>
+            L.LetP(name, CPSAdd, Seq(ext_len, c1), transform(body))
+          }
+        }
+      }
     }
 
-    case H.LetP(name, L3BlockGet, Seq(a), body) => {
-      L.LetP(name, CPSBlockGet, Seq(a), transform(body))
-    }
-
-    case H.LetP(name, L3BlockSet, Seq(a), body) => {
-      L.LetP(name, CPSBlockSet, Seq(a), transform(body))
+    case H.LetP(name, L3BlockGet, Seq(a, b_loc), body) => {
+      tempLetL(1) { c1 =>
+        tempLetP(CPSArithShiftR, Seq(b_loc, c1)) { cps_pos =>
+          L.LetP(name, CPSBlockGet, Seq(a, cps_pos), transform(body))
+        }
+      }
     }
     
-//----------------------------------------------------------------------
+    case H.LetP(name, L3BlockSet, Seq(a, b_loc, b_val), body) => {
+      tempLetL(1) { c1 =>
+        tempLetP(CPSArithShiftR, Seq(b_loc, c1)) { cps_pos =>
+          L.LetP(name, CPSBlockSet, Seq(a, cps_pos, b_val), transform(body))
+        }
+      }
+    }
+    
+    //----------------------------------------------------------------------
     //representing L3 integers(4) - ByteRead and ByteWrite
-//----------------------------------------------------------------------
-    
+    //----------------------------------------------------------------------
+
     case H.LetP(name, L3ByteRead, Seq(), body) => {
       tempLetP(CPSByteRead, Seq()) { t1 =>
         {
@@ -413,17 +403,17 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     }
 
     case H.LetP(name, L3ByteWrite, Seq(a), body) => {
-      tempLetL(1){c1 =>
-         tempLetP(CPSArithShiftR, Seq(a,c1)){shiftedVal =>
-            L.LetP(name, CPSByteWrite, Seq(shiftedVal), transform(body)) 
-         }
+      tempLetL(1) { c1 =>
+        tempLetP(CPSArithShiftR, Seq(a, c1)) { shiftedVal =>
+          L.LetP(name, CPSByteWrite, Seq(shiftedVal), transform(body))
+        }
       }
     }
 
-//----------------------------------------------------------------------   
+    //----------------------------------------------------------------------   
     //character literal typecasting to and fro Integer primitive
-//----------------------------------------------------------------------
-    
+    //----------------------------------------------------------------------
+
     case H.LetP(name, L3CharToInt, Seq(arg), body) =>
       {
         tempLetL(2) { c1 =>
@@ -441,30 +431,29 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           }
         }
       }
-    
-//----------------------------------------------------------------------    
+
+    //----------------------------------------------------------------------    
     // Check type primitive LSB 
-//----------------------------------------------------------------------
-    
+    //----------------------------------------------------------------------
+
     case H.If(L3IntP, Seq(a), thenC, elseC) =>
       ifEqLSB(a, Seq(1), thenC, elseC)
-    
+
     case H.If(L3BlockP, Seq(a), thenC, elseC) =>
-      ifEqLSB(a, Seq(0, 0), thenC, elseC)  
-      
+      ifEqLSB(a, Seq(0, 0), thenC, elseC)
+
     case H.If(L3BoolP, Seq(a), thenC, elseC) =>
       ifEqLSB(a, Seq(1, 0, 1, 0), thenC, elseC)
 
     case H.If(L3UnitP, Seq(a), thenC, elseC) =>
-      ifEqLSB(a, Seq(0 ,0 ,1 ,0), thenC, elseC)
-    
+      ifEqLSB(a, Seq(0, 0, 1, 0), thenC, elseC)
+
     case H.If(L3CharP, Seq(a), thenC, elseC) =>
       ifEqLSB(a, Seq(1, 1, 0), thenC, elseC)
-    
-      
-//----------------------------------------------------------------------
+
+    //----------------------------------------------------------------------
     // For continuations
-//----------------------------------------------------------------------
+    //----------------------------------------------------------------------
     case H.AppC(cnt, args) =>
       L.AppC(cnt, args)
 
@@ -476,47 +465,47 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
       }
       L.LetC(letC_cont, transform(body))
     }
-    
-//----------------------------------------------------------------------   
+
+    //----------------------------------------------------------------------   
     // For identity primitive
-//----------------------------------------------------------------------
+    //----------------------------------------------------------------------
 
     case H.LetP(name, L3Id, args, body) =>
       L.LetP(name, CPSId, args, transform(body))
-      
-//----------------------------------------------------------------------
-     // The Halt primitive 
-//----------------------------------------------------------------------
+
+    //----------------------------------------------------------------------
+    // The Halt primitive 
+    //----------------------------------------------------------------------
     case H.Halt(arg) =>
       tempLetL(1) { res1 =>
         tempLetP(CPSArithShiftR, Seq(arg, res1)) { res2 =>
           L.Halt(res2)
         }
       }
-  }
-  
-  
-   private def freeVariables(tree: H.Tree)
-                           (implicit worker: Map[Symbol, Set[Symbol]])
-      : Set[Symbol] = tree match {
-    case H.LetL(name, _, body) =>
-      freeVariables(body) - name   // F[e] \ { n } 
-
-    case H.LetP(name, p, args, body) =>
-      freeVariables(body) - name ++ args  //(F[e] \ { n }) ∪ { n1, … }
-    
-    case H.LetC(cnts, body) =>
-        freeVariables(body) ++ (cnts flatMap {c => freeVariables(c.body) -- c.args})
-    
-    case H.LetF(funs, body) =>
-      freeVariables(body) ++ (funs flatMap {f => freeVariables(f.body) -- f.args}) -- (funs flatMap {f => f.name})
-    
-    case H.AppC(cntName, args) =>
-      args.toSet
-    
-    case H.AppF(funName, retC, args) =>
-      args.toSet + funName
       
+  }
+
+   private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
+    case H.LetL(name, _, body) =>
+      freeVariables(body) - name
+
+    case H.LetP(name, prim, args, body) =>
+      freeVariables(body) -- Set(name) ++ args.toSet
+
+    case H.LetC(cnts, body) =>
+      val ext_cnt = cnts flatMap { cnt => freeVariables(cnt.body) -- cnt.args.toSet }
+      freeVariables(body) ++ ext_cnt.toSet
+
+    case H.LetF(funs, body) =>
+      val ext_func = funs flatMap { ft => freeVariables(ft.body) -ft.name -- ft.args.toSet }
+      freeVariables(body) ++ ext_func.toSet
+
+    case H.AppC(cnt, args) =>
+      args.toSet
+
+    case H.AppF(fun, retC, args) =>
+      Set(fun) ++ args.toSet
+
     case H.If(cond, args, thenC, elseC) =>
       args.toSet
   }
@@ -583,5 +572,5 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
           L.If(CPSEq, Seq(r, t), tC, eC)
         }
       }
-    } 
+    }
 }

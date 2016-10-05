@@ -1,0 +1,307 @@
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 8 initial tasks for 8 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringBlackbox, sbt.ForkMain$AnnotatedFingerscan@63b0ea21, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestAppOrder[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic14[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic15[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic16[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic17[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic18[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic19[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic20[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic21[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic22[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic24[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestSideEffectingCondition[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringBegin[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringCond[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringIf[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringLets[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringRec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringStrings[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.76s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 74 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_Tail, sbt.ForkMain$AnnotatedFingerscan@616199ee, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailNestedIf[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailUselessContinuations[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailIfInsideLetRec[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 0 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 3 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Blackbox, sbt.ForkMain$AnnotatedFingerscan@5ebb3b59, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestAppOrder[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic14[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic15[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic16[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic17[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic18[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic19[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic20[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic21[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic22[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic24[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestSideEffectingCondition[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringBegin[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringCond[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringIf[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringLets[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringRec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringStrings[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.15s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 74 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringWhitebox, sbt.ForkMain$AnnotatedFingerscan@774b256e, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSAnd[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSOr[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSNot[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun2[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 0 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 15 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSValueRepresentation_Whitebox, sbt.ForkMain$AnnotatedFingerscan@5a197cc4, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Whitebox[0m.[36mtestValueReprOnePlusTwo[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 0 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_NonTail, sbt.ForkMain$AnnotatedFingerscan@78d95198, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailLiteral[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLet[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRecAndApp[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRecAndApp[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailIf[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailTestPrimitive[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailValuePrimitive[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 0 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 9 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_Cond, sbt.ForkMain$AnnotatedFingerscan@4802edf0, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueTrue[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseFalse[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueFalse[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseTrue[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueExpr[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseExpr[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprFalse[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprTrue[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 0 total, 0.0s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 8 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSValueRepresentation_Blackbox, sbt.ForkMain$AnnotatedFingerscan@4acc56fb, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestAppOrder[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists5[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists6[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists7[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists8[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings1[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLetrec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic9[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic10[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic11[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic12[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic13[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic14[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic15[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic16[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic17[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic18[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic19[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic20[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic21[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic22[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic24[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional2[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional3[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestSideEffectingCondition[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional4[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringBegin[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringCond[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringIf[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringLets[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringRec[0m ignored[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringStrings[0m ignored[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.179s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 74 events.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[0minfo[0m] [0mPassed: Total 258, Failed 0, Errors 0, Passed 3, Skipped 255[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_Cond[0m
+[0m[[0mdebug[0m] [0m	l3.test.L3DesugaringWhitebox[0m
+[0m[[0mdebug[0m] [0m	l3.test.L3DesugaringBlackbox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_NonTail[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_Tail[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Blackbox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CPSValueRepresentation_Whitebox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CPSValueRepresentation_Blackbox[0m

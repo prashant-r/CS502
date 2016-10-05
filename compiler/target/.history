@@ -1,0 +1,12 @@
+> test-only -- --tests=testCondNestedExprFalsesbt
+sbt
+test-only -- --tests=testCondNestedExprFalse
+test-only -- --tests=testLibFunctions3
+test-only -- --tests=testLibStrings1
+test-only -- --tests=testLibStrings2
+test-only -- --tests=toreSasurKaNati
+test-only -- --tests=testLibFunctions3
+test-only -- --tests=testPrimitiveLogic24
+test-only -- --tests=testPrimitiveLogic23
+sbt test
+test-only -- --tests=testPrimitiveLogic23

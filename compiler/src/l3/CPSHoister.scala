@@ -19,29 +19,19 @@ object CPSHoister extends (Tree => Tree) {
     
     case LetC(cnts: Seq[CntDef], body: Tree) => {
       val LetF(f, e) = hoist(body)
-      val hoistedCntsAndFuns = cnts map {c => {val h = hoist(c.body)
-        (CntDef(c.name, c.args, h.body), h.funs)
-        }}
-      val seqFs = f
-      (hoistedCntsAndFuns map{e2 => e2._2}).foreach(seqFs+:_)
-      LetF(seqFs, LetC(hoistedCntsAndFuns map{e1 => e1._1},e))
+      val cs = cnts map{ eachCnt => hoistC(eachCnt)}
+      val csList = cs.toList
+      LetF(csList.flatMap(_._1) ++: f, LetC(csList map(_._2), e))
     }
     
     case LetF(funs: Seq[FunDef], body: Tree) => {
       val LetF(f, e) = hoist(body)
-      val mod_FunDefsAndFuns = funs map {c => {val h = hoist(c.body)
-        (FunDef(c.name, c.retC, c.args, h.body), h.funs)
-        }}
-      
-      val newFs = mod_FunDefsAndFuns map{e2 => e2._2}
-      val seqFs = f
-      newFs.foreach(seqFs+:_)
-      LetF((mod_FunDefsAndFuns map{e1 => e1._1})++seqFs, e)
-      
+      LetF((funs flatMap{ eachFunDef => hoistF(eachFunDef) } ) ++: f, e)
     }
+   
     
     case other =>
-      LetF(Seq(), other)
+      LetF(Seq.empty, other)
     
   }
   

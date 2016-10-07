@@ -58,11 +58,8 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
                  
           var preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) -- (Seq(input.name) ++ input.args))
 
-          (L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
+          (L.FunDef(w1, input.retC, Seq(env1) ++: input.args, {
             val arg_count = input.args.size
-            
-            //println("Arg count is" );
-            //println(arg_count);
             
             var x = 1
             var vees: Seq[L.Name] = Seq()
@@ -72,8 +69,8 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
               
               val x_name = Symbol.fresh("x_s_name")
               collectKVBdgs = collectKVBdgs ++ Seq((x_name, x))
-              pBdgs = pBdgs ++ Seq((v1, CPSBlockGet, Seq(env1, x_name)))
-              vees = vees ++ Seq(v1)
+              pBdgs ++= Seq((v1, CPSBlockGet, Seq(env1, x_name)))
+              vees ++= Seq(v1)
             }
             var image = Seq(env1) ++ vees
          
@@ -95,22 +92,22 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
             
             val btag = 202
             val fv_num = Symbol.fresh("fv_numberrraavvvi")
-            collectKVBdgs = collectKVBdgs ++ Seq((fv_num, fun_ext.args.size))
+            collectKVBdgs ++= Seq((fv_num, fun_ext.args.size))
             
-            balloc_bdgs = balloc_bdgs ++ Seq((pimgworker(0), CPSBlockAlloc(btag), Seq(fv_num)))
+            balloc_bdgs ++= Seq((pimgworker(0), CPSBlockAlloc(btag), Seq(fv_num)))
             
             val func_args_size = pimgworker.size - 1
             var xi = 0
             val name_zero_t1 = Symbol.fresh("block_set_zero")
             val t1_zero = Symbol.fresh("zero_name")
-            collectKVBdgs = collectKVBdgs ++ Seq((t1_zero, xi))
-            bset_bdgs = bset_bdgs ++ Seq((name_zero_t1, CPSBlockSet, Seq(pimgworker(0), t1_zero, fun_ext.name)))
+            collectKVBdgs ++= Seq((t1_zero, xi))
+            bset_bdgs ++= Seq((name_zero_t1, CPSBlockSet, Seq(pimgworker(0), t1_zero, fun_ext.name)))
 
             for (xi <- 1 to func_args_size) {
               val new_t1 = Symbol.fresh("block_set_wrapper")
               val name_int_t1 = Symbol.fresh("block_set_int")
-              collectKVBdgs = collectKVBdgs ++ Seq((name_int_t1, xi))
-              bset_bdgs = bset_bdgs ++ Seq((new_t1, CPSBlockSet, Seq(pimgworker(0), name_int_t1, pimgworker(xi))))
+              collectKVBdgs ++= Seq((name_int_t1, xi))
+              bset_bdgs ++= Seq((new_t1, CPSBlockSet, Seq(pimgworker(0), name_int_t1, pimgworker(xi))))
             }
           }
         }

@@ -10,3 +10,4 @@ test-only -- --tests=testPrimitiveLogic24
 test-only -- --tests=testPrimitiveLogic23
 sbt test
 test-only -- --tests=testPrimitiveLogic23
+testOnly *ValueRepre*

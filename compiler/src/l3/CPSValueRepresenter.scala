@@ -55,7 +55,50 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     //---------------------------------------------------------------------- 
     // Function abstraction, definition and application
     //----------------------------------------------------------------------   
-    case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
+//    
+//    case H.LetF(funcs, body) =>
+//      val workers = funcs map ( fun => {
+//        val map = Map[Symbol, Set[Symbol]]()
+//        val free_variables = freeVariables(fun)(Map.empty).toSeq
+//        val (w1, env1) = ( Symbol.fresh("w"), Symbol.fresh("env") )
+//        val vi = free_variables.map( _ => Symbol.fresh("v"))
+//        val subst = Substitution( fun.name +: free_variables, env1 +: vi )
+//        val worker_body = transform(fun.body).subst( subst )
+//        val f = L.FunDef( w1, fun.retC, env1 +: fun.args,
+//              ( 1 to vi.length ).foldRight( worker_body ) { (i, body) =>
+//                tempLetL( i) { c =>
+//                  L.LetP( vi(i-1), CPSBlockGet, Seq(env1, c), body )
+//                }
+//              }
+//            )
+//        ( f, w1, free_variables, fun.name )       
+//      })
+//      
+//      val tbody = workers.foldRight(transform(body)){ (w, body) =>
+//        val (w1, fvars, fname ) = (w._2, w._3, w._4)
+//        tempLetL( fvars.length + 1) { c1 =>
+//          tempLetL( 0 ) { c0 =>
+//              L.LetP( Symbol.fresh("t"), CPSBlockSet, Seq( fname, c0, w1  ),
+//                (1 to fvars.length).foldRight(body) { (i, b) =>
+//                  tempLetL(i) { ci =>
+//                    tempLetP( CPSBlockSet, Seq(fname, ci, fvars(i-1)))( _ => b)
+//                  }
+//                }
+//              )
+//          }
+//        }
+//      }
+//     
+//      val another_body = workers.foldRight(tbody){(w, init_val) =>
+//        val (fvars, fname) = (w._3, w._4)
+//        tempLetL(fvars.size +1){ lambda =>
+//          L.LetP(fname, CPSBlockAlloc(202), Seq(lambda), init_val)
+//         
+//        }
+//       
+//      }
+//      L.LetF( workers.map( _._1), another_body)
+      case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
 
       val x = println("Starting now")
 
@@ -475,29 +518,58 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
   }
 
-  private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
+//  private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
+//    case H.LetL(name, _, body) =>
+//      freeVariables(body) - name
+//
+//    case H.LetP(name, prim, args, body) =>
+//      freeVariables(body) -- Set(name) ++ args.toSet
+//
+//    case H.LetC(cnts, body) =>
+//      val ext_cnt = cnts flatMap { cnt => freeVariables(cnt)}
+//      freeVariables(body) union ext_cnt.toSet
+//
+//    case H.LetF(funs, body) =>
+//      val ext_func = funs flatMap { ft => freeVariables(ft) }
+//      freeVariables(body) ++ ext_func.toSet
+//
+//    case H.AppC(cnt, args) =>
+//      args.toSet
+//
+//    case H.AppF(fun, retC, args) =>
+//      args.toSet + fun
+//
+//    case H.If(cond, args, thenC, elseC) =>
+//      args.toSet
+//  }
+  private def freeVariables(tree: H.Tree)
+                           (implicit worker: Map[Symbol, Set[Symbol]])
+      : Set[Symbol] = tree match {
     case H.LetL(name, _, body) =>
       freeVariables(body) - name
-
-    case H.LetP(name, prim, args, body) =>
-      freeVariables(body) -- Set(name) ++ args.toSet
-
-    case H.LetC(cnts, body) =>
-      val ext_cnt = cnts flatMap { cnt => freeVariables(cnt)}
-      freeVariables(body) union ext_cnt.toSet
-
-    case H.LetF(funs, body) =>
-      val ext_func = funs flatMap { ft => freeVariables(ft) }
-      freeVariables(body) ++ ext_func.toSet
-
-    case H.AppC(cnt, args) =>
+       
+    case H.LetP(name, prim, args, body) => 
+      (freeVariables(body) - name) union ( args.toSet )
+     
+    case H.LetC(cnts, body) => 
+      cnts.foldLeft( freeVariables(body) ){ 
+        (set, cnt) => set union freeVariables(cnt)
+        }
+     
+    case H.LetF(funcs, body) => 
+      val funNames = funcs map ( _.name )
+      funcs.foldLeft( freeVariables(body) ) { (set, fun) => 
+          set union freeVariables(fun)
+      } -- funNames.toSet
+       
+    case H.AppC(cnt, args) => args.toSet
+     
+    case H.AppF(f, c, args) => args.toSet + f
+     
+    case H.If(cond, args, thenC, elseC ) => 
       args.toSet
-
-    case H.AppF(fun, retC, args) =>
-      Set(fun) ++ args.toSet
-
-    case H.If(cond, args, thenC, elseC) =>
-      args.toSet
+     
+    case H.Halt(arg) => Set(arg)
   }
 
   private def freeVariables(cnt: H.CntDef)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] =

@@ -1,17 +1,10 @@
-[0m[[0mdebug[0m] [0mThe l3.CPSValueRepresenter$ source file has the following regular definitions changed:[0m
-[0m[[0mdebug[0m] [0m	ifEqLSBUnit, pKVBdgs, ifEqLSBBoolean.[0m
-[0m[[0mdebug[0m] [0mAll member reference dependencies will be considered within this context.[0m
-[0m[[0mdebug[0m] [0mFiles invalidated by inheriting from (external) l3.CPSValueRepresenter$: Set(); now invalidating by inheritance (internally).[0m
-[0m[[0mdebug[0m] [0mGetting direct dependencies of all sources transitively invalidated by inheritance.[0m
-[0m[[0mdebug[0m] [0mGetting sources that directly depend on (external) l3.CPSValueRepresenter$.[0m
-[0m[[0mdebug[0m] [0mNone of the modified names appears in /Users/prashantravi/Documents/workspace/Compiler/Compilers/compiler/test/l3/test/infrastructure/CPSLowTest.scala. This dependency is not being considered for invalidation.[0m
 [0m[[0mdebug[0m] [0m[0m
 [0m[[0mdebug[0m] [0mInitial source changes: [0m
 [0m[[0mdebug[0m] [0m	removed:Set()[0m
 [0m[[0mdebug[0m] [0m	added: Set()[0m
 [0m[[0mdebug[0m] [0m	modified: Set()[0m
 [0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
-[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set(NamesChange(l3.CPSValueRepresenter$,ModifiedNames(regularNames = ifEqLSBUnit, pKVBdgs, ifEqLSBBoolean, implicitNames = )))[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
 [0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
 [0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set()[0m
 [0m[[0mdebug[0m] [0m[0m

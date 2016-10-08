@@ -42,7 +42,6 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
         b match {
           case (en, v, e) =>
             {
-              println(" Here 1")
               L.LetP(en, v, e, t)
 
             }
@@ -55,129 +54,123 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
     //---------------------------------------------------------------------- 
     // Function abstraction, definition and application
     //----------------------------------------------------------------------   
-//    
-//    case H.LetF(funcs, body) =>
-//      val workers = funcs map ( fun => {
-//        val map = Map[Symbol, Set[Symbol]]()
-//        val free_variables = freeVariables(fun)(Map.empty).toSeq
-//        val (w1, env1) = ( Symbol.fresh("w"), Symbol.fresh("env") )
-//        val vi = free_variables.map( _ => Symbol.fresh("v"))
-//        val subst = Substitution( fun.name +: free_variables, env1 +: vi )
-//        val worker_body = transform(fun.body).subst( subst )
-//        val f = L.FunDef( w1, fun.retC, env1 +: fun.args,
-//              ( 1 to vi.length ).foldRight( worker_body ) { (i, body) =>
-//                tempLetL( i) { c =>
-//                  L.LetP( vi(i-1), CPSBlockGet, Seq(env1, c), body )
-//                }
-//              }
-//            )
-//        ( f, w1, free_variables, fun.name )       
-//      })
-//      
-//      val tbody = workers.foldRight(transform(body)){ (w, body) =>
-//        val (w1, fvars, fname ) = (w._2, w._3, w._4)
-//        tempLetL( fvars.length + 1) { c1 =>
-//          tempLetL( 0 ) { c0 =>
-//              L.LetP( Symbol.fresh("t"), CPSBlockSet, Seq( fname, c0, w1  ),
-//                (1 to fvars.length).foldRight(body) { (i, b) =>
-//                  tempLetL(i) { ci =>
-//                    tempLetP( CPSBlockSet, Seq(fname, ci, fvars(i-1)))( _ => b)
-//                  }
-//                }
-//              )
-//          }
-//        }
-//      }
-//     
-//      val another_body = workers.foldRight(tbody){(w, init_val) =>
-//        val (fvars, fname) = (w._3, w._4)
-//        tempLetL(fvars.size +1){ lambda =>
-//          L.LetP(fname, CPSBlockAlloc(202), Seq(lambda), init_val)
-//         
-//        }
-//       
-//      }
-//      L.LetF( workers.map( _._1), another_body)
-      case H.LetF(funs: Seq[H.FunDef], body: H.Tree) => {
 
-      val x = println("Starting now")
+    case H.LetF(funcs, body) =>
+      {
+        resetCollectKVBdgs();
+        val convertedFunctions = funcs map { input =>
+          {
+            val w1 = Symbol.fresh("worker_name")
+            val env1 = Symbol.fresh("environ")
+            var preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) - input.name ++ input.args).toSeq
 
-      resetCollectKVBdgs();
-      val convertedFunctions = funs map { input =>
-        {
-          val w1 = Symbol.fresh("worker_name")
-          val env1 = Symbol.fresh("environ")
-          var preimage = Seq(input.name) ++ (freeVariables(input.body)(Map.empty) - input.name ++ input.args).toSeq
+            (L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
+              val arg_count = input.args.size
 
-          println("Starting now 2")
-          (L.FunDef(w1, input.retC, Seq(env1) ++ input.args, {
-            val arg_count = input.args.size
-
-            var x = 1
-            var vees: Seq[L.Name] = Seq.empty
-            var pBdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
-            println("Starting now 8")
-            for (x <- 1 to preimage.size - 1) {
-              val v1 = Symbol.fresh("interior_v1")
-              val x_name = Symbol.fresh("x_s_name")
-              collectKVBdgs ++= Seq((x_name, x))
-              pBdgs ++= Seq((v1, CPSBlockGet, Seq(env1, x_name)))
-              vees ++= Seq(v1)
-            }
-            println("Starting now 3")
-            var image = Seq(env1) ++ vees
-            sLetP_*(pBdgs, transform(input.body.subst(Substitution(preimage, image))))
-          }), preimage)
-        }
-      }
-      var balloc_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
-      convertedFunctions.foreach(e1 =>
-        e1 match {
-          case (x, y) =>
-            {
-              println("Starting now 4")
-              var fun_ext = x
-              var pimgworker = y
-              val btag = 202
-              val fv_num = Symbol.fresh("fv")
-              collectKVBdgs ++= Seq((fv_num, pimgworker.size))
-              balloc_bdgs ++= Seq((pimgworker(0), CPSBlockAlloc(btag), Seq(fv_num)))
-            }
-        })
-      var all_funcs: Seq[l3.SymbolicCPSTreeModuleLow.FunDef] = Seq.empty
-      var bset_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
-      convertedFunctions.foreach(e1 =>
-        e1 match {
-          case (x, y) =>
-            {
-              println("Starting now 5")
-              var fun_ext = x
-              all_funcs ++= Seq(fun_ext);
-              var pimgworker = y
-              val func_args_size = pimgworker.size - 1
-              var xi = 0
-              val name_zero_t1 = Symbol.fresh("block_set_zero")
-              val t1_zero = Symbol.fresh("zero_name")
-              collectKVBdgs ++= Seq((t1_zero, xi))
-              bset_bdgs ++= Seq((name_zero_t1, CPSBlockSet, Seq(pimgworker(0), t1_zero, fun_ext.name)))
-
-              for (xi <- 1 to func_args_size) {
-                val new_t1 = Symbol.fresh("block_set_wrapper")
-                val name_int_t1 = Symbol.fresh("block_set_int")
-                collectKVBdgs ++= Seq((name_int_t1, xi))
-                bset_bdgs ++= Seq((new_t1, CPSBlockSet, Seq(pimgworker(0), name_int_t1, pimgworker(xi))))
+              var x = 1
+              var vees: Seq[L.Name] = Seq.empty
+              var pBdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
+              for (x <- 1 to preimage.size - 1) {
+                val v1 = Symbol.fresh("interior_v1")
+                val x_name = Symbol.fresh("x_s_name")
+                collectKVBdgs ++= Seq((x_name, x))
+                pBdgs ++= Seq((v1, CPSBlockGet, Seq(env1, x_name)))
+                vees ++= Seq(v1)
               }
-            }
-        })
-      println("Starting now 6")
-      var tot_bdgs = balloc_bdgs ++ bset_bdgs
-      sLetL_*(collectKVBdgs: Seq[(L.Name, L.Literal)],
-        L.LetF(all_funcs, {
-          println("Starting now 7")
-          sLetP_*(tot_bdgs, transform(body))
-        }))
+              var image = Seq(env1) ++ vees
+              sLetP_*(pBdgs, transform(input.body.subst(Substitution(preimage, image))))
+            }), preimage)
+          }
+        }
+        val workersHelper = funcs map (fun => {
+          val map = Map[Symbol, Set[Symbol]]()
+          val fvs = freeVariables(fun)(Map.empty).toSeq
+          val w1 = Symbol.fresh("w")
+          val env1 = Symbol.fresh("env")
+          val vees = fvs.map(_ => Symbol.fresh("vi"))
+          (L.FunDef(w1, fun.retC, env1 +: fun.args,
 
-    }
+            (1 to vees.length).foldRight(transform(fun.body.subst(Substitution(fun.name +: fvs, env1 +: vees)))) { (i, body) =>
+              tempLetL(i) { c =>
+                L.LetP(vees(i - 1), CPSBlockGet, Seq(env1, c), body)
+              }
+            }), w1, fvs, fun.name)
+        })
+
+        val btag = 202
+        var balloc_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
+        convertedFunctions.foreach(e1 =>
+          e1 match {
+            case (x, y) =>
+              {
+                var fun_ext = x
+                var pimgworker = y
+
+                val fv_num = Symbol.fresh("fv")
+                collectKVBdgs ++= Seq((fv_num, pimgworker.size))
+                balloc_bdgs ++= Seq((pimgworker(0), CPSBlockAlloc(btag), Seq(fv_num)))
+              }
+          })
+
+        val finalBody = workersHelper.foldRight(transform(body)) { (w, body) =>
+          w match {
+            case (a, b, c, d) =>
+              tempLetL(c.length + 1) { c1 =>
+                tempLetL(0) { c0 =>
+                  L.LetP(Symbol.fresh("t"), CPSBlockSet, Seq(d, c0, b),
+                    (1 to c.length).foldRight(body) { (i, b) =>
+                      tempLetL(i) { ci =>
+                        tempLetP(CPSBlockSet, Seq(d, ci, c(i - 1)))(_ => b)
+                      }
+                    })
+                }
+              }
+          }
+        }
+        var all_funcs: Seq[l3.SymbolicCPSTreeModuleLow.FunDef] = Seq.empty
+        var bset_bdgs: Seq[(L.Name, L.ValuePrimitive, Seq[L.Name])] = Seq.empty
+        convertedFunctions.foreach(e1 =>
+          e1 match {
+            case (x, y) =>
+              {
+                var fun_ext = x
+                all_funcs ++= Seq(fun_ext);
+                var pimgworker = y
+                val func_args_size = pimgworker.size - 1
+                var xi = 0
+                val name_zero_t1 = Symbol.fresh("block_set_zero")
+                val t1_zero = Symbol.fresh("zero_name")
+                collectKVBdgs ++= Seq((t1_zero, xi))
+                bset_bdgs ++= Seq((name_zero_t1, CPSBlockSet, Seq(pimgworker(0), t1_zero, fun_ext.name)))
+
+                for (xi <- 1 to func_args_size) {
+                  val new_t1 = Symbol.fresh("block_set_wrapper")
+                  val name_int_t1 = Symbol.fresh("block_set_int")
+                  collectKVBdgs ++= Seq((name_int_t1, xi))
+                  bset_bdgs ++= Seq((new_t1, CPSBlockSet, Seq(pimgworker(0), name_int_t1, pimgworker(xi))))
+                }
+              }
+          })
+        var tot_bdgs = balloc_bdgs ++ bset_bdgs
+
+        L.LetF(workersHelper.map(_._1), {
+          workersHelper.foldRight(finalBody) { (w, init_val) =>
+            w match {
+              case (x, w, y, z) =>
+                {
+                  val theSize = y.size + 1;
+                  tempLetL(theSize) { phi =>
+                    {
+
+                      L.LetP(z, CPSBlockAlloc(btag), Seq(phi), init_val)
+                    }
+                  }
+                }
+            }
+
+          }
+        })
+      }
 
     case H.AppF(fun, retC, args) =>
       {
@@ -518,57 +511,31 @@ object CPSValueRepresenter extends (H.Tree => L.Tree) {
 
   }
 
-//  private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
-//    case H.LetL(name, _, body) =>
-//      freeVariables(body) - name
-//
-//    case H.LetP(name, prim, args, body) =>
-//      freeVariables(body) -- Set(name) ++ args.toSet
-//
-//    case H.LetC(cnts, body) =>
-//      val ext_cnt = cnts flatMap { cnt => freeVariables(cnt)}
-//      freeVariables(body) union ext_cnt.toSet
-//
-//    case H.LetF(funs, body) =>
-//      val ext_func = funs flatMap { ft => freeVariables(ft) }
-//      freeVariables(body) ++ ext_func.toSet
-//
-//    case H.AppC(cnt, args) =>
-//      args.toSet
-//
-//    case H.AppF(fun, retC, args) =>
-//      args.toSet + fun
-//
-//    case H.If(cond, args, thenC, elseC) =>
-//      args.toSet
-//  }
-  private def freeVariables(tree: H.Tree)
-                           (implicit worker: Map[Symbol, Set[Symbol]])
-      : Set[Symbol] = tree match {
+  private def freeVariables(tree: H.Tree)(implicit worker: Map[Symbol, Set[Symbol]]): Set[Symbol] = tree match {
     case H.LetL(name, _, body) =>
       freeVariables(body) - name
-       
-    case H.LetP(name, prim, args, body) => 
-      (freeVariables(body) - name) union ( args.toSet )
-     
-    case H.LetC(cnts, body) => 
-      cnts.foldLeft( freeVariables(body) ){ 
+
+    case H.LetP(name, prim, args, body) =>
+      freeVariables(H.LetL(name,UnitLit, body)) union (args.toSet)
+
+    case H.LetC(cnts, body) =>
+      cnts.foldLeft(freeVariables(body)) {
         (set, cnt) => set union freeVariables(cnt)
-        }
-     
-    case H.LetF(funcs, body) => 
-      val funNames = funcs map ( _.name )
-      funcs.foldLeft( freeVariables(body) ) { (set, fun) => 
-          set union freeVariables(fun)
-      } -- funNames.toSet
-       
-    case H.AppC(cnt, args) => args.toSet
-     
+      }
+
+    case H.LetF(funcs, body) =>
+      val fNames = funcs map (_.name)
+      funcs.foldLeft(freeVariables(body)) { (set, fun) =>
+        set union freeVariables(fun)
+      } -- fNames.toSet
+
+    case H.AppC(cnt, args)  => args.toSet
+
     case H.AppF(f, c, args) => args.toSet + f
-     
-    case H.If(cond, args, thenC, elseC ) => 
+
+    case H.If(cond, args, thenC, elseC) =>
       args.toSet
-     
+
     case H.Halt(arg) => Set(arg)
   }
 

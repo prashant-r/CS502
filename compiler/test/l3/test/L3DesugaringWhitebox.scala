@@ -81,5 +81,4 @@ class L3DesugaringWhitebox extends L3Test {
     "(fun (x) (not x))",
     "(letrec ((v$1 (fun (v$2) (if v$2 #f #t)))) v$1)"
   )
-
 }

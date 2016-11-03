@@ -25,7 +25,7 @@ case object CPSXOr extends CPSValuePrimitive("^")
 case object CPSByteRead extends CPSValuePrimitive("byte-read")
 case object CPSByteWrite extends CPSValuePrimitive("byte-write")
 
-case class  CPSBlockAlloc(tag: Int) extends CPSValuePrimitive("block-alloc-"+tag)
+case class CPSBlockAlloc(tag: Int) extends CPSValuePrimitive("block-alloc-"+tag)
 case object CPSBlockTag extends CPSValuePrimitive("block-tag")
 case object CPSBlockLength extends CPSValuePrimitive("block-length")
 case object CPSBlockGet extends CPSValuePrimitive("block-get")

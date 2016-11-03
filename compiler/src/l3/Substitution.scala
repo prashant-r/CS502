@@ -18,13 +18,6 @@ object Substitution {
     empty + (from -> to)
 
   def apply[T](from: Seq[T], to: Seq[T]): Substitution[T] = {
-    
-    //println(from.length)
-    
-    //println("should be equal to")
-    
-    //println(to.length)
-    
     require(from.length == to.length)
     empty ++ (from zip to)
   }

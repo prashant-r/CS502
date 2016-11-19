@@ -1,8 +1,8 @@
 #Successful Tests
-#Fri Nov 18 19:28:59 EST 2016
-l3.test.CL3ToCPS_Whitebox_NonTail=1479515339155
-l3.test.CL3ToCPS_Blackbox=1479515258220
-l3.test.CL3ToCPS_Whitebox_Tail=1479515302186
-l3.test.L3DesugaringBlackbox=1479515338693
-l3.test.CL3ToCPS_Whitebox_Cond=1479515249911
-l3.test.L3DesugaringWhitebox=1479515243415
+#Sat Nov 19 08:59:19 EST 2016
+l3.test.CL3ToCPS_Whitebox_NonTail=1479563958751
+l3.test.CL3ToCPS_Blackbox=1479563885870
+l3.test.CL3ToCPS_Whitebox_Tail=1479563914758
+l3.test.L3DesugaringBlackbox=1479563958075
+l3.test.CL3ToCPS_Whitebox_Cond=1479563877860
+l3.test.L3DesugaringWhitebox=1479563871114

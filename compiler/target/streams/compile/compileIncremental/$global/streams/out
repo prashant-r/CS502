@@ -16,7 +16,7 @@
 [0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/pravi1/Documents/Compilers/compiler/target/scala-2.11/classes...[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
 [0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
-[0m[[0mdebug[0m] [0mRunning cached compiler 37f5989f, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 21360382, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
 [0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
 [0m[[0mdebug[0m] [0m	-feature[0m
 [0m[[0mdebug[0m] [0m	-deprecation[0m
@@ -25,7 +25,7 @@
 [0m[[0mdebug[0m] [0m	/opt/java/jdk1.8.0_45/jre/lib/resources.jar:/opt/java/jdk1.8.0_45/jre/lib/rt.jar:/opt/java/jdk1.8.0_45/jre/lib/sunrsasign.jar:/opt/java/jdk1.8.0_45/jre/lib/jsse.jar:/opt/java/jdk1.8.0_45/jre/lib/jce.jar:/opt/java/jdk1.8.0_45/jre/lib/charsets.jar:/opt/java/jdk1.8.0_45/jre/lib/jfr.jar:/opt/java/jdk1.8.0_45/jre/classes:/home/pravi1/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar[0m
 [0m[[0mdebug[0m] [0m	-classpath[0m
 [0m[[0mdebug[0m] [0m	/home/pravi1/Documents/Compilers/compiler/target/scala-2.11/classes:/home/pravi1/.ivy2/cache/com.lihaoyi/fastparse_2.11/jars/fastparse_2.11-0.3.4.jar:/home/pravi1/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/jars/fastparse-utils_2.11-0.3.4.jar[0m
-[0m[[0mdebug[0m] [0mScala compilation took 39.045610808 s[0m
+[0m[[0mdebug[0m] [0mScala compilation took 45.670417436 s[0m
 [0m[[0mdebug[0m] [0mNew invalidations:[0m
 [0m[[0mdebug[0m] [0m	Set()[0m
 [0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m

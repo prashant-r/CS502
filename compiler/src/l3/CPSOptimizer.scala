@@ -94,8 +94,30 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       
 
       // Dead code elimination
-      // case LetL(name, value, body) if(s.dead(name)) => { shrinkT(body)(State(census(body))) }
-      //case LetP(name, prim, args, body) => if(s.dead(tree)) => shrinkT(body)(State )     
+      case LetL(name, value, body) => { if(s.dead(name)) shrinkT(body)(State(census(body))) else LetL(name, value, shrinkT(body)(State(census(body)))) }
+      case LetP(name, prim, args, body) => { if (s.dead(name) && !impure(prim)) shrinkT(body)(State(census(body))) else LetP(name, prim, args, shrinkT(body)(State(census(body)))) }
+      case LetF(funcs, body) => {
+        val filteredFuncs = funcs.filter(x => !s.dead(x.name))
+        val shrunkFuncs   = filteredFuncs.map(f => FunDef(f.name, f.retC, f.args, shrinkT(f.body)(State(census(f.body)))))
+        LetF(shrunkFuncs, shrinkT(body)(State(census(body))))
+      }
+      case LetC(conts, body) => {
+        val filteredConts = conts.filter(x => !s.dead(x.name)) 
+        val shrunkConts   = filteredConts.map(c => CntDef(c.name, c.args, shrinkT(c.body)(State(census(c.body)))))
+        LetC(shrunkConts, shrinkT(body)(State(census(body)))) 
+      }
+
+      // Common subexpression elimination
+      // case LetL(name, value, body) => ???
+      // case LetP(name, prim, args, body) => ???
+      // case LetF(funcs, body) =>  ???
+      // case LetC(conts, body) => ???
+
+      // Constant folding
+      //case If(condition, arguments, thenC, elseC) => s.lEnv
+
+
+
       case _ =>
         // TODO
         tree
@@ -115,8 +137,32 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       val cntLimit = i
 
       def inlineT(tree: Tree)(implicit s: State): Tree = tree match {
-        case _ =>
-          // TODO
+        
+         case LetL(name, value, body) => LetL(name, value, inlineT(body))
+
+         case LetP(name, prim, args, body) => LetP(name, prim, args, inlineT(body))
+
+
+         case LetF(funcs, body) if size(tree) < funLimit => {
+
+            def canInline(f: FunDef): Boolean = {
+              val copt = State(census(body))
+              val funcBodyList = funcs.map(x => State(census(x.body)).dead(f.name))
+              val andAllFuncs = funcBodyList.foldLeft(true)(_ && _)
+              s.appliedOnce(f.name) && copt.dead(f.name) && andAllFuncs
+            }
+              val funcsInlineable = funcs.filter(func => (canInline(func)))
+              LetF(funcs.filterNot(canInline(_)).map(f => 
+              f.copy(body = inlineT(f.body)(s.withFuns(funcsInlineable)))),
+              inlineT(body)(s.withFuns(funcsInlineable)))
+         }
+
+
+         case LetF(funcs, body) => {
+            val shrunkFuncs   = funcs.map(f => FunDef(f.name, f.retC, f.args, inlineT(f.body)(State(census(f.body)))))
+            LetF(shrunkFuncs, inlineT(body)(State(census(body))))
+         }
+         case _ =>
           tree
       }
 
@@ -263,13 +309,24 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     case (L3IntBitwiseAnd, Seq(IntLit(x), IntLit(y))) => IntLit(x & y)
     case (L3IntBitwiseOr, Seq(IntLit(x), IntLit(y))) => IntLit(x | y)
     case (L3IntBitwiseXOr, Seq(IntLit(x), IntLit(y))) => IntLit(x ^ y)
+
+    case (L3CharToInt, Seq(CharLit(x))) => IntLit(x>>2)
+    case (L3IntToChar, Seq(IntLit(x))) => CharLit((x<<2)+2)
   }
 
   protected val cEvaluator: PartialFunction[(TestPrimitive, Seq[Literal]),
                                             Boolean] = {
     case (L3IntP, Seq(IntLit(_))) => true
+    case (L3IntP, Seq(_)) => false
+
     case (L3BoolP, Seq(BooleanLit(_))) => true
+    case (L3BoolP, Seq(_)) => false
+
     case (L3CharP, Seq(CharLit(_))) => true
+    case (L3CharP, Seq(_)) => false
+
+    case (L3UnitP, Seq(UnitLit)) => true
+    case (L3UnitP, Seq(_)) => false
 
     case (L3IntLt, Seq(IntLit(x), IntLit(y))) => x < y
     case (L3IntLe, Seq(IntLit(x), IntLit(y))) => x <= y

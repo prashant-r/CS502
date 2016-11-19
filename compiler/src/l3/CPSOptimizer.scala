@@ -91,6 +91,11 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
 
   private def shrink(tree: Tree): Tree = {
     def shrinkT(tree: Tree)(implicit s: State): Tree = tree match {
+      
+
+      // Dead code elimination
+      // case LetL(name, value, body) if(s.dead(name)) => { shrinkT(body)(State(census(body))) }
+      //case LetP(name, prim, args, body) => if(s.dead(tree)) => shrinkT(body)(State )     
       case _ =>
         // TODO
         tree
@@ -248,7 +253,14 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
   protected val vEvaluator: PartialFunction[(ValuePrimitive, Seq[Literal]),
                                             Literal] = {
     case (L3IntAdd, Seq(IntLit(x), IntLit(y))) => IntLit(x + y)
-    // TODO
+    case (L3IntSub, Seq(IntLit(x), IntLit(y))) => IntLit(x - y)
+    case (L3IntMul, Seq(IntLit(x), IntLit(y))) => IntLit(x * y)
+    case (L3IntDiv, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorDiv(x, y)
+    case (L3IntMod, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorMod(x, y)
+
+    case (L3ArithShiftL, Seq(IntLit(x), IntLit(y))) => IntLit(x << y)
+    
+
   }
 
   protected val cEvaluator: PartialFunction[(TestPrimitive, Seq[Literal]),

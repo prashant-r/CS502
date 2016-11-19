@@ -1,0 +1,45 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /home/pravi1/Documents/Compilers/compiler/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 253b0eb7, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-feature[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-unchecked[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/opt/java/jdk1.8.0_45/jre/lib/resources.jar:/opt/java/jdk1.8.0_45/jre/lib/rt.jar:/opt/java/jdk1.8.0_45/jre/lib/sunrsasign.jar:/opt/java/jdk1.8.0_45/jre/lib/jsse.jar:/opt/java/jdk1.8.0_45/jre/lib/jce.jar:/opt/java/jdk1.8.0_45/jre/lib/charsets.jar:/opt/java/jdk1.8.0_45/jre/lib/jfr.jar:/opt/java/jdk1.8.0_45/jre/classes:/home/pravi1/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/home/pravi1/Documents/Compilers/compiler/target/scala-2.11/classes:/home/pravi1/.ivy2/cache/com.lihaoyi/fastparse_2.11/jars/fastparse_2.11-0.3.4.jar:/home/pravi1/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/jars/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[31merror[0m] [0m/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala:258: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Int[0m
+[0m[[31merror[0m] [0m required: l3.CPSOptimizerHigh.treeModule.Literal[0m
+[0m[[31merror[0m] [0m    (which expands to)  l3.CL3Literal[0m
+[0m[[31merror[0m] [0m    case (L3IntDiv, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorDiv(x, y)[0m
+[0m[[31merror[0m] [0m                                                                           ^[0m
+[0m[[31merror[0m] [0m/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala:259: type mismatch;[0m
+[0m[[31merror[0m] [0m found   : Int[0m
+[0m[[31merror[0m] [0m required: l3.CPSOptimizerHigh.treeModule.Literal[0m
+[0m[[31merror[0m] [0m    (which expands to)  l3.CL3Literal[0m
+[0m[[31merror[0m] [0m    case (L3IntMod, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorMod(x, y)[0m
+[0m[[31merror[0m] [0m                                                                           ^[0m
+[0m[[31merror[0m] [0m/home/pravi1/Documents/Compilers/compiler/src/l3/CPSOptimizer.scala:261: not found: value L3ArithShiftL[0m
+[0m[[31merror[0m] [0m    case (L3ArithShiftL, Seq(IntLit(x), IntLit(y))) => IntLit(x << y)[0m
+[0m[[31merror[0m] [0m          ^[0m
+[0m[[31merror[0m] [0mthree errors found[0m
+[0m[[0mdebug[0m] [0mCompilation failed (CompilerInterface)[0m
+[0m[[31merror[0m] [0m(compile:[31mcompileIncremental[0m) Compilation failed[0m

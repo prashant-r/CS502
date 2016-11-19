@@ -255,18 +255,29 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     case (L3IntAdd, Seq(IntLit(x), IntLit(y))) => IntLit(x + y)
     case (L3IntSub, Seq(IntLit(x), IntLit(y))) => IntLit(x - y)
     case (L3IntMul, Seq(IntLit(x), IntLit(y))) => IntLit(x * y)
-    case (L3IntDiv, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorDiv(x, y)
-    case (L3IntMod, Seq(IntLit(x), IntLit(y))) if (y != 0) => Math.floorMod(x, y)
+    case (L3IntDiv, Seq(IntLit(x), IntLit(y))) if (y != 0) => IntLit(Math.floorDiv(x, y))
+    case (L3IntMod, Seq(IntLit(x), IntLit(y))) if (y != 0) => IntLit(Math.floorMod(x, y))
 
-    case (L3ArithShiftL, Seq(IntLit(x), IntLit(y))) => IntLit(x << y)
-    
-
+    case (L3IntArithShiftLeft, Seq(IntLit(x), IntLit(y))) => IntLit(x << y)
+    case (L3IntArithShiftRight, Seq(IntLit(x), IntLit(y))) => IntLit(x >> y)
+    case (L3IntBitwiseAnd, Seq(IntLit(x), IntLit(y))) => IntLit(x & y)
+    case (L3IntBitwiseOr, Seq(IntLit(x), IntLit(y))) => IntLit(x | y)
+    case (L3IntBitwiseXOr, Seq(IntLit(x), IntLit(y))) => IntLit(x ^ y)
   }
 
   protected val cEvaluator: PartialFunction[(TestPrimitive, Seq[Literal]),
                                             Boolean] = {
     case (L3IntP, Seq(IntLit(_))) => true
-    // TODO
+    case (L3BoolP, Seq(BooleanLit(_))) => true
+    case (L3CharP, Seq(CharLit(_))) => true
+
+    case (L3IntLt, Seq(IntLit(x), IntLit(y))) => x < y
+    case (L3IntLe, Seq(IntLit(x), IntLit(y))) => x <= y
+    case (L3Eq, Seq(x, y)) => x == y
+    case (L3Ne, Seq(x, y)) => x != y
+    case (L3IntGe, Seq(IntLit(x), IntLit(y))) => x >= y
+    case (L3IntGt, Seq(IntLit(x), IntLit(y))) => x > y
+    case _ => false
   }
 }
 

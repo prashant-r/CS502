@@ -1,0 +1,13 @@
+<classpath>
+  <classpathentry kind="src" path="src" output="target\scala-2.11\classes"/>
+  <classpathentry kind="src" path="test" output="target\scala-2.11\test-classes"/>
+  <classpathentry kind="con" path="org.scala-ide.sdt.launching.SCALA_CONTAINER"/>
+  <classpathentry sourcepath="C:\Users\Prashant\.ivy2\cache\com.lihaoyi\fastparse_2.11\srcs\fastparse_2.11-0.3.4-sources.jar" kind="lib" path="C:\Users\Prashant\.ivy2\cache\com.lihaoyi\fastparse_2.11\jars\fastparse_2.11-0.3.4.jar"/>
+  <classpathentry sourcepath="C:\Users\Prashant\.ivy2\cache\com.lihaoyi\fastparse-utils_2.11\srcs\fastparse-utils_2.11-0.3.4-sources.jar" kind="lib" path="C:\Users\Prashant\.ivy2\cache\com.lihaoyi\fastparse-utils_2.11\jars\fastparse-utils_2.11-0.3.4.jar"/>
+  <classpathentry sourcepath="C:\Users\Prashant\.ivy2\cache\com.novocode\junit-interface\srcs\junit-interface-0.10-M2-sources.jar" kind="lib" path="C:\Users\Prashant\.ivy2\cache\com.novocode\junit-interface\jars\junit-interface-0.10-M2.jar"/>
+  <classpathentry sourcepath="C:\Users\Prashant\.ivy2\cache\junit\junit-dep\srcs\junit-dep-4.10-sources.jar" kind="lib" path="C:\Users\Prashant\.ivy2\cache\junit\junit-dep\jars\junit-dep-4.10.jar"/>
+  <classpathentry sourcepath="C:\Users\Prashant\.ivy2\cache\org.hamcrest\hamcrest-core\srcs\hamcrest-core-1.1-sources.jar" kind="lib" path="C:\Users\Prashant\.ivy2\cache\org.hamcrest\hamcrest-core\jars\hamcrest-core-1.1.jar"/>
+  <classpathentry kind="lib" path="C:\Users\Prashant\.ivy2\cache\org.scala-tools.testing\test-interface\jars\test-interface-0.5.jar"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="output" path="bin"/>
+</classpath>

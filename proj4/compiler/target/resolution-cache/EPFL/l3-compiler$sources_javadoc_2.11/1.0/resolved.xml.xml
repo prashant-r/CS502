@@ -4,7 +4,7 @@
 		module="l3-compiler$sources_javadoc_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20161119193749"
+		publication="20161120001825"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>

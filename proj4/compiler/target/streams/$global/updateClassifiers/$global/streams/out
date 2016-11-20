@@ -6,7 +6,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies for EPFL#l3-compiler$sources_javadoc_2.11;1.0 [compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.scala-lang#scala-library;2.11.7 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@734a6abd[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@332cdf8d[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.scala-lang#scala-library;2.11.7[0m
 [0m[[0mdebug[0m] [0m	found org.scala-lang#scala-library;2.11.7 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m	[2.11.7] org.scala-lang#scala-library;2.11.7[0m
@@ -15,7 +15,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->org.scala-lang#scala-library;2.11.7 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse_2.11;0.3.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@78d9d712[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@556d4641[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse_2.11;0.3.4[0m
 [0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse_2.11;0.3.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->runtime][0m
@@ -23,7 +23,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse_2.11;0.3.4 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse-utils_2.11;0.3.4 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.lihaoyi#fastparse-utils_2.11;0.3.4 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@6db5a8e[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@23682334[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.lihaoyi#fastparse-utils_2.11;0.3.4[0m
 [0m[[0mdebug[0m] [0m	found com.lihaoyi#fastparse-utils_2.11;0.3.4 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse-utils_2.11;0.3.4 [compile->runtime][0m
@@ -98,7 +98,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.lihaoyi#fastparse-utils_2.11;0.3.4 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving com.novocode#junit-interface;0.10-M2 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@74f30df7[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@17f6c5a7[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: com.novocode#junit-interface;0.10-M2[0m
 [0m[[0mdebug[0m] [0m	found com.novocode#junit-interface;0.10-M2 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->runtime][0m
@@ -106,7 +106,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->com.novocode#junit-interface;0.10-M2 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->junit#junit-dep;4.10 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving junit#junit-dep;4.10 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@2c281475[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@198a9d06[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: junit#junit-dep;4.10[0m
 [0m[[0mdebug[0m] [0m	found junit#junit-dep;4.10 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->junit#junit-dep;4.10 [test->runtime][0m
@@ -114,7 +114,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->junit#junit-dep;4.10 [test->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->org.hamcrest#hamcrest-core;1.1 [test->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.hamcrest#hamcrest-core;1.1 ...[0m
-[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@59154586[0m
+[0m[[0mdebug[0m] [0msbt-chain: Checking cache for: sbt.ivyint.MergedDescriptors@ad529bd[0m
 [0m[[0mdebug[0m] [0msbt-chain: module revision found in cache: org.hamcrest#hamcrest-core;1.1[0m
 [0m[[0mdebug[0m] [0m	found org.hamcrest#hamcrest-core;1.1 in sbt-chain[0m
 [0m[[0mdebug[0m] [0m== resolving dependencies EPFL#l3-compiler$sources_javadoc_2.11;1.0->org.hamcrest#hamcrest-core;1.1 [test->runtime][0m
@@ -357,7 +357,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang.modules#scala-parser-combinators_2.11;1.0.4!scala-parser-combinators_2.11.jar(doc)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(src)[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] jline#jline;2.12.1!jline.jar(doc)[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 249ms :: artifacts dl 31ms[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 170ms :: artifacts dl 32ms[0m
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 compile produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 runtime produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-runtime.xml[0m
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 test produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-test.xml[0m
@@ -371,4 +371,4 @@
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 docs produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-docs.xml[0m
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 pom produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for EPFL#l3-compiler$sources_javadoc_2.11;1.0 scala-tool produced in C:\Users\Prashant\Documents\Compilers\proj4\compiler\target\resolution-cache\reports\EPFL-l3-compiler$sources_javadoc_2.11-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (249ms resolve - 31ms download)[0m
+[0m[[0mdebug[0m] [0m	resolve done (170ms resolve - 32ms download)[0m

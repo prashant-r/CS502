@@ -304,7 +304,7 @@ object CPSOptimizerHigh extends CPSOptimizer(SymbolicCPSTreeModule)
     Set(L3BlockSet, L3ByteRead, L3ByteWrite)
 
   protected val unstable: ValuePrimitive => Boolean = {
-    // TODO
+    case L3BlockAlloc(_) | L3BlockGet | L3ByteRead => true
     case _ => false
   }
 

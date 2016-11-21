@@ -1,0 +1,22 @@
+(pprint #u) (newline-print)
+(pprint #t) (newline-print)
+(pprint #f) (newline-print)
+(pprint 'c') (newline-print)
+(pprint "foo") (newline-print)
+(pprint 42) (newline-print)
+(pprint (fun () #u)) (newline-print)
+
+(def b (@block-alloc-27 3))
+(@block-set! b 0 "This is a block with tag 27")
+(@block-set! b 1 "And three elements")
+(let ((inner (@block-alloc-93 2)))
+  (@block-set! inner 0 "The third of which is a block with the answer")
+  (@block-set! inner 1 42)
+  (@block-set! b 2 inner))
+
+(def c (deepcopy b))
+(@block-set! (@block-get c 2) 0 "The last of which has been modified...")
+(@block-set! (@block-get c 2) 1 "... so it doesn't contain an answer anymore.")
+
+(pprint b) (newline-print)
+(pprint c) (newline-print)

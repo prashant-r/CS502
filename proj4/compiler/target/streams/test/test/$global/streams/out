@@ -1,0 +1,1005 @@
+[0m[[0mdebug[0m] [0mForking tests - parallelism = false[0m
+[0m[[0mdebug[0m] [0mCreate a single-thread test executor[0m
+[0m[[0mdebug[0m] [0mRunner for sbt.FrameworkWrapper produced 10 initial tasks for 10 tests.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSOptimizer_Blackbox, sbt.ForkMain$AnnotatedFingerscan@945bbcb, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibStrings4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringStrings[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveBlocks7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic15[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic16[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic16[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic17[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic17[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic18[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic18[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic19[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic19[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic20[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic20[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic21[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic21[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic22[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestSideEffectingCondition[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestSideEffectingCondition[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestConditional4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringBegin[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringBegin[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringCond[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringCond[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringLets[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringLets[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestDesugaringRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestAppOrder[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Blackbox[0m.[36mtestAppOrder[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 6.929s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_Cond, sbt.ForkMain$AnnotatedFingerscan@6567b99b, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueTrue[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueTrue[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseFalse[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseFalse[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueFalse[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueFalse[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseTrue[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseTrue[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueExpr[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedTrueExpr[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseExpr[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedFalseExpr[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprFalse[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprFalse[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprTrue[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Cond[0m.[36mtestCondNestedExprTrue[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 8 total, 0.143s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 8 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Blackbox, sbt.ForkMain$AnnotatedFingerscan@1ba5ff3, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibStrings4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringStrings[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveBlocks7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic15[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic16[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic16[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic17[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic17[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic18[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic18[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic19[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic19[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic20[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic20[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic21[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic21[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic22[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestSideEffectingCondition[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestSideEffectingCondition[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestConditional4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringBegin[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringBegin[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringCond[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringCond[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringLets[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringLets[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestDesugaringRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestAppOrder[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Blackbox[0m.[36mtestAppOrder[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 1.678s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_NonTail, sbt.ForkMain$AnnotatedFingerscan@38f846f1, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailLiteral[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailLiteral[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLet[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLet[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRecAndApp[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailSingleLetRecAndApp[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRecAndApp[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailMultiLetRecAndApp[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailValuePrimitive[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailValuePrimitive[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailTestPrimitive[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_NonTail[0m.[36mtestNonTailTestPrimitive[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 9 total, 0.112s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 9 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringBlackbox, sbt.ForkMain$AnnotatedFingerscan@4c06ed6b, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibStrings4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringStrings[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveArithmetic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveBlocks7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic15[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic16[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic16[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic17[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic17[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic18[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic18[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic19[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic19[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic20[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic20[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic21[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic21[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic22[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestSideEffectingCondition[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestSideEffectingCondition[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestConditional4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringBegin[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringBegin[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringCond[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringCond[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringLets[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringLets[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestDesugaringRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestAppOrder[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringBlackbox[0m.[36mtestAppOrder[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 1.518s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSOptimizer_Greybox, sbt.ForkMain$AnnotatedFingerscan@2f599c61, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReduction[0m started[0m
+[0m[[31merror[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[31mtestEtaReduction[0m failed: assertion failed: Checks failed for: [0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0m      (letrec ((f (fun (x) x)) (g (fun (y) (f y))) (h (fun (z) (g z))))[0m
+[0m[[31merror[0m] [0m        (@ + (@ + (@ + (@ + (@ + (@ + (@ + (@ + (g 1) (g 2))[0m
+[0m[[31merror[0m] [0m        (g 3)) (h 1)) (h 2)) (h 3)) (f 1)) (f 2)) (f 3)))[0m
+[0m[[31merror[0m] [0m    [0m
+[0m[[31merror[0m] [0mStatistics:[0m
+[0m[[31merror[0m] [0mInstruction Stats[0m
+[0m[[31merror[0m] [0m=================[0m
+[0m[[31merror[0m] [0m      18  AppF[0m
+[0m[[31merror[0m] [0m       9  AppC[0m
+[0m[[31merror[0m] [0m       9  LetC[0m
+[0m[[31merror[0m] [0m       5  LetL[0m
+[0m[[31merror[0m] [0m       1  Halt[0m
+[0m[[31merror[0m] [0m       1  LetF[0m
+[0m[[31merror[0m] [0m       1  LetP[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mValue Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSArithShiftR$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mFunctions defined: 3[0m
+[0m[[31merror[0m] [0mContinuations defined: 9[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReduction[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReductionInfintelyRecursiveFunction[0m started[0m
+[0m[[31merror[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[31mtestEtaReductionInfintelyRecursiveFunction[0m failed: assertion failed: Checks failed for: [0m
+[0m[[31merror[0m] [0m(letrec ((f (fun (x) (g x))) (g (fun (x) (f x)))) (if (@ = (@byte-read) -1) (g 3) #u))[0m
+[0m[[31merror[0m] [0mStatistics:[0m
+[0m[[31merror[0m] [0mInstruction Stats[0m
+[0m[[31merror[0m] [0m=================[0m
+[0m[[31merror[0m] [0m       5  LetL[0m
+[0m[[31merror[0m] [0m       4  LetP[0m
+[0m[[31merror[0m] [0m       3  LetC[0m
+[0m[[31merror[0m] [0m       1  Halt[0m
+[0m[[31merror[0m] [0m       1  LetF[0m
+[0m[[31merror[0m] [0m       1  AppC[0m
+[0m[[31merror[0m] [0m       1  If[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mValue Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSOr$[0m
+[0m[[31merror[0m] [0m       1  CPSArithShiftR$[0m
+[0m[[31merror[0m] [0m       1  CPSByteRead$[0m
+[0m[[31merror[0m] [0m       1  CPSArithShiftL$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mLogic Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSEq$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mFunctions defined: 2[0m
+[0m[[31merror[0m] [0mContinuations defined: 3[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestEtaReductionInfintelyRecursiveFunction[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsSimple[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsSimple[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive3WithEtaReduction[0m started[0m
+[0m[[31merror[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[31mtestDCEFunsRecursive3WithEtaReduction[0m failed: assertion failed: Checks failed for: [0m
+[0m[[31merror[0m] [0m(letrec ((f (fun (x) (if (@ = x 0) 0 (g (@ - x 1))))) (g (fun (y) (f y))) (h (fun (z) z))) (@ + (@ + (f 0) (f 0)) (f 0)))[0m
+[0m[[31merror[0m] [0mStatistics:[0m
+[0m[[31merror[0m] [0mInstruction Stats[0m
+[0m[[31merror[0m] [0m=================[0m
+[0m[[31merror[0m] [0m       9  LetC[0m
+[0m[[31merror[0m] [0m       8  LetL[0m
+[0m[[31merror[0m] [0m       3  AppF[0m
+[0m[[31merror[0m] [0m       3  AppC[0m
+[0m[[31merror[0m] [0m       3  If[0m
+[0m[[31merror[0m] [0m       1  Halt[0m
+[0m[[31merror[0m] [0m       1  LetF[0m
+[0m[[31merror[0m] [0m       1  LetP[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mValue Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSArithShiftR$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mLogic Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       3  CPSEq$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mFunctions defined: 2[0m
+[0m[[31merror[0m] [0mContinuations defined: 9[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCEFunsRecursive3WithEtaReduction[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetLiteral[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetLiteral[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetPrimitive[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestDCELetPrimitive[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodySameLetRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodySameLetRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodyDifferentLetRecs[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningInsideFunctionBodyDifferentLetRecs[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningCrasher[0m started[0m
+[0m[[31merror[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[31mtestFunInliningCrasher[0m failed: assertion failed: Checks failed for: [0m
+[0m[[31merror[0m] [0m(letrec ((f (fun (x) (if (@ = x 0) 0 (g (@ - x 1))))) (g (fun (y) (f y))) (h (fun (z) z))) (f 0))[0m
+[0m[[31merror[0m] [0mStatistics:[0m
+[0m[[31merror[0m] [0mInstruction Stats[0m
+[0m[[31merror[0m] [0m=================[0m
+[0m[[31merror[0m] [0m       4  LetL[0m
+[0m[[31merror[0m] [0m       3  LetC[0m
+[0m[[31merror[0m] [0m       1  Halt[0m
+[0m[[31merror[0m] [0m       1  LetF[0m
+[0m[[31merror[0m] [0m       1  AppF[0m
+[0m[[31merror[0m] [0m       1  AppC[0m
+[0m[[31merror[0m] [0m       1  LetP[0m
+[0m[[31merror[0m] [0m       1  If[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mValue Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSArithShiftR$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mLogic Primitives Stats[0m
+[0m[[31merror[0m] [0m======================[0m
+[0m[[31merror[0m] [0m       1  CPSEq$[0m
+[0m[[31merror[0m] [0m[0m
+[0m[[31merror[0m] [0mFunctions defined: 2[0m
+[0m[[31merror[0m] [0mContinuations defined: 3[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningCrasher[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningRecursiveTrick[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInliningRecursiveTrick[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestContInliningInsideContBody[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestContInliningInsideContBody[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntP[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntP[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntPNot[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntPNot[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingPlus[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingPlus[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMinus[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMinus[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTimes[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTimes[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingDiv[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingDiv[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMod[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingMod[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntChar[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingIntChar[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingCharInt[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingCharInt[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTypePrims[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingTypePrims[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanAnd[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanAnd[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanOr[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldingBooleanOr[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldDCEContinuations[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantFoldDCEContinuations[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantPropagationSimple[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestConstantPropagationSimple[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsAddZero2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubZero[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubZero[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubItself[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsSubItself[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulOne2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsMulZero2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsDivOne[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestNeutralElementsDivOne[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationSimpleBlockTag[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationSimpleBlockTag[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationComplexBlockTag[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestCommonSubexpressionEliminationComplexBlockTag[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlingAndDCE[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlingAndDCE[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestInliningConstantFoldingDCE[0m started[0m
+[0m[[31merror[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[31mtestInliningConstantFoldingDCE[0m failed: assertion failed: [0m
+[0m[[31merror[0m] [0mOutput is different: (whitespace is always ignored)[0m
+[0m[[31merror[0m] [0msource: [0m
+[0m[[31merror[0m] [0m (def byte-write (fun (c) (@byte-write c)))[0m
+[0m[[31merror[0m] [0m          (def function-compose[0m
+[0m[[31merror[0m] [0m               (fun (f g)[0m
+[0m[[31merror[0m] [0m                    (fun (x) (f (g x)))))[0m
+[0m[[31merror[0m] [0m          (def + (fun (x y) (@+ x y)))[0m
+[0m[[31merror[0m] [0m          (def succ (fun (x) (+ x 1)))[0m
+[0m[[31merror[0m] [0m          (def twice (fun (x) (+ x x)))[0m
+[0m[[31merror[0m] [0m          (byte-write ((function-compose succ twice) 39))[0m
+[0m[[31merror[0m] [0m          (byte-write ((function-compose succ succ) 73))[0m
+[0m[[31merror[0m] [0m          (byte-write ((function-compose twice succ) 4))[0m
+[0m[[31merror[0m] [0moutput: [0m
+[0m[[31merror[0m] [0m(let* ((v$1[0m
+[0m[[31merror[0m] [0m        (fun (v$10 v$11)[0m
+[0m[[31merror[0m] [0m          (let* ((v$12 1) (v$13 (@>> v$11 v$12)) (v$14 (@byte-write v$13)))[0m
+[0m[[31merror[0m] [0m            (v$10 v$14))))[0m
+[0m[[31merror[0m] [0m       (v$2[0m
+[0m[[31merror[0m] [0m        (fun (v$15 v$16 v$17)[0m
+[0m[[31merror[0m] [0m          (let* ((v$18 3)[0m
+[0m[[31merror[0m] [0m                 (v$19 (@block-alloc-202 v$18))[0m
+[0m[[31merror[0m] [0m                 (v$20 0)[0m
+[0m[[31merror[0m] [0m                 (v$21 (@block-set! v$19 v$20 v$4))[0m
+[0m[[31merror[0m] [0m                 (v$22 1)[0m
+[0m[[31merror[0m] [0m                 (v$23 (@block-set! v$19 v$22 v$17))[0m
+[0m[[31merror[0m] [0m                 (v$24 2)[0m
+[0m[[31merror[0m] [0m                 (v$25 (@block-set! v$19 v$24 v$16)))[0m
+[0m[[31merror[0m] [0m            (v$15 v$19))))[0m
+[0m[[31merror[0m] [0m       (v$3[0m
+[0m[[31merror[0m] [0m        (fun (v$26 v$27 v$28 v$29)[0m
+[0m[[31merror[0m] [0m          (let* ((v$30[0m
+[0m[[31merror[0m] [0m                  (cnt (v$31)[0m
+[0m[[31merror[0m] [0m                    (let* ((v$32 0) (v$33 (@block-get v$28 v$32)))[0m
+[0m[[31merror[0m] [0m                      (v$33 v$26 v$28 v$31))))[0m
+[0m[[31merror[0m] [0m                 (v$34 0)[0m
+[0m[[31merror[0m] [0m                 (v$35 (@block-get v$27 v$34)))[0m
+[0m[[31merror[0m] [0m            (v$35 v$30 v$27 v$29))))[0m
+[0m[[31merror[0m] [0m       (v$4[0m
+[0m[[31merror[0m] [0m        (fun (v$36 v$37 v$38)[0m
+[0m[[31merror[0m] [0m          (let* ((v$39 1)[0m
+[0m[[31merror[0m] [0m                 (v$40 (@block-get v$37 v$39))[0m
+[0m[[31merror[0m] [0m                 (v$41 2)[0m
+[0m[[31merror[0m] [0m                 (v$42 (@block-get v$37 v$41)))[0m
+[0m[[31merror[0m] [0m            (v$3 v$36 v$40 v$42 v$38))))[0m
+[0m[[31merror[0m] [0m       (v$5[0m
+[0m[[31merror[0m] [0m        (fun (v$43 v$44 v$45)[0m
+[0m[[31merror[0m] [0m          (let* ((v$46 (@+ v$44 v$45)) (v$47 1) (v$48 (@- v$46 v$47)))[0m
+[0m[[31merror[0m] [0m            (v$43 v$48))))[0m
+[0m[[31merror[0m] [0m       (v$6 (fun (v$49 v$50) (let ((v$51 3)) (v$5 v$49 v$50 v$51))))[0m
+[0m[[31merror[0m] [0m       (v$7 (fun (v$52 v$53 v$54) (v$6 v$52 v$54)))[0m
+[0m[[31merror[0m] [0m       (v$8 (fun (v$55 v$56) (v$5 v$55 v$56 v$56)))[0m
+[0m[[31merror[0m] [0m       (v$9 (fun (v$57 v$58 v$59) (v$8 v$57 v$59)))[0m
+[0m[[31merror[0m] [0m       (v$60 1)[0m
+[0m[[31merror[0m] [0m       (v$61 (@block-alloc-202 v$60))[0m
+[0m[[31merror[0m] [0m       (v$62 0)[0m
+[0m[[31merror[0m] [0m       (v$63 (@block-set! v$61 v$62 v$7))[0m
+[0m[[31merror[0m] [0m       (v$64 (@block-alloc-202 v$60))[0m
+[0m[[31merror[0m] [0m       (v$65 (@block-set! v$64 v$62 v$9))[0m
+[0m[[31merror[0m] [0m       (v$66[0m
+[0m[[31merror[0m] [0m        (cnt (v$67)[0m
+[0m[[31merror[0m] [0m          (let* ((v$68 79)[0m
+[0m[[31merror[0m] [0m                 (v$69[0m
+[0m[[31merror[0m] [0m                  (cnt (v$70)[0m
+[0m[[31merror[0m] [0m                    (let ((v$71[0m
+[0m[[31merror[0m] [0m                           (cnt (v$72)[0m
+[0m[[31merror[0m] [0m                             (let ((v$73[0m
+[0m[[31merror[0m] [0m                                    (cnt (v$74)[0m
+[0m[[31merror[0m] [0m                                      (let* ((v$75 147)[0m
+[0m[[31merror[0m] [0m                                             (v$76[0m
+[0m[[31merror[0m] [0m                                              (cnt (v$77)[0m
+[0m[[31merror[0m] [0m                                                (let ((v$78[0m
+[0m[[31merror[0m] [0m                                                       (cnt (v$79)[0m
+[0m[[31merror[0m] [0m                                                         (let ((v$80[0m
+[0m[[31merror[0m] [0m                                                                (cnt (v$81)[0m
+[0m[[31merror[0m] [0m                                                                  (let* ((v$82[0m
+[0m[[31merror[0m] [0m                                                                          9)[0m
+[0m[[31merror[0m] [0m                                                                         (v$83[0m
+[0m[[31merror[0m] [0m                                                                          (cnt (v$84)[0m
+[0m[[31merror[0m] [0m                                                                            (let ((v$85[0m
+[0m[[31merror[0m] [0m                                                                                   (cnt (v$86)[0m
+[0m[[31merror[0m] [0m                                                                                     (halt v$62))))[0m
+[0m[[31merror[0m] [0m                                                                              (v$1 v$85[0m
+[0m[[31merror[0m] [0m                                                                                   v$84))))[0m
+[0m[[31merror[0m] [0m                                                                         (v$87[0m
+[0m[[31merror[0m] [0m                                                                          (@block-get v$81[0m
+[0m[[31merror[0m] [0m                                                                                      v$62)))[0m
+[0m[[31merror[0m] [0m                                                                    (v$87 v$83[0m
+[0m[[31merror[0m] [0m                                                                          v$81[0m
+[0m[[31merror[0m] [0m                                                                          v$82)))))[0m
+[0m[[31merror[0m] [0m                                                           (v$2 v$80[0m
+[0m[[31merror[0m] [0m                                                                v$64[0m
+[0m[[31merror[0m] [0m                                                                v$61)))))[0m
+[0m[[31merror[0m] [0m                                                  (v$1 v$78 v$77))))[0m
+[0m[[31merror[0m] [0m                                             (v$88 (@block-get v$74 v$62)))[0m
+[0m[[31merror[0m] [0m                                        (v$88 v$76 v$74 v$75)))))[0m
+[0m[[31merror[0m] [0m                               (v$2 v$73 v$61 v$61)))))[0m
+[0m[[31merror[0m] [0m                      (v$1 v$71 v$70))))[0m
+[0m[[31merror[0m] [0m                 (v$89 (@block-get v$67 v$62)))[0m
+[0m[[31merror[0m] [0m            (v$89 v$69 v$67 v$68)))))[0m
+[0m[[31merror[0m] [0m  (v$2 v$66 v$61 v$64))[0m
+[0m[[31merror[0m] [0mexpected output: [0m
+[0m[[31merror[0m] [0m (let* ((v$1 79)[0m
+[0m[[31merror[0m] [0m                 (v$2 (@byte-write v$1))[0m
+[0m[[31merror[0m] [0m                 (v$3 75)[0m
+[0m[[31merror[0m] [0m                 (v$4 (@byte-write v$3))[0m
+[0m[[31merror[0m] [0m                 (v$5 10)[0m
+[0m[[31merror[0m] [0m                 (v$6 (@byte-write v$5))[0m
+[0m[[31merror[0m] [0m                 (v$7 0))[0m
+[0m[[31merror[0m] [0m             (halt v$7))[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestInliningConstantFoldingDCE[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlining[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestFunInlining[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestContInlining[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSOptimizer_Greybox[0m.[36mtestContInlining[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[31m5 failed[0m[34m, [0m[34m0 ignored[0m[34m, 42 total, 0.858s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 42 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSValueRepresentation_Whitebox, sbt.ForkMain$AnnotatedFingerscan@75d52d3e, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Whitebox[0m.[36mtestValueReprOnePlusTwo[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Whitebox[0m.[36mtestValueReprOnePlusTwo[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 1 total, 0.017s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 1 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CPSValueRepresentation_Blackbox, sbt.ForkMain$AnnotatedFingerscan@392d5f7f, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibStrings4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibFunctions2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLetrec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLetrec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestLibLists1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringStrings[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringStrings[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveArithmetic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveBlocks7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic5[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic5[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic6[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic6[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic7[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic7[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic8[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic8[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic9[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic9[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic10[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic10[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic11[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic11[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic12[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic12[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic13[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic13[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic14[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic14[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic15[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic15[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic16[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic16[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic17[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic17[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic18[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic18[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic19[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic19[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic20[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic20[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic21[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic21[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic22[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic22[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic23[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestPrimitiveLogic23[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestSideEffectingCondition[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestSideEffectingCondition[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional4[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestConditional4[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringBegin[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringBegin[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringCond[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringCond[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringLets[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringLets[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestDesugaringRec[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestAppOrder[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCPSValueRepresentation_Blackbox[0m.[36mtestAppOrder[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 73 total, 4.64s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 73 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.CL3ToCPS_Whitebox_Tail, sbt.ForkMain$AnnotatedFingerscan@2d5bbf5f, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailNestedIf[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailNestedIf[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailUselessContinuations[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailUselessContinuations[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailIfInsideLetRec[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mCL3ToCPS_Whitebox_Tail[0m.[36mtestTailIfInsideLetRec[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 3 total, 0.052s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 3 events.[0m
+[0m[[0mdebug[0m] [0m  Running TaskDef(l3.test.L3DesugaringWhitebox, sbt.ForkMain$AnnotatedFingerscan@3cc7b54b, false, [SuiteSelector])[0m
+[0m[[0minfo[0m] [0m[34mTest run started[0m[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSBegin2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSRec2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar3[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar3[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSCond2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSAnd[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSAnd[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun1[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSFun1[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar2[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSLetStar2[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSOr[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSOr[0m finished[0m
+[0m[[0minfo[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSNot[0m started[0m
+[0m[[0mdebug[0m] [0mTest l3.test.[33mL3DesugaringWhitebox[0m.[36mtestSNot[0m finished[0m
+[0m[[0minfo[0m] [0m[34mTest run finished: [0m[34m0 failed[0m[34m, [0m[34m0 ignored[0m[34m, 15 total, 0.194s[0m[0m
+[0m[[0mdebug[0m] [0m    Produced 0 nested tasks and 15 events.[0m
+[0m[[0mdebug[0m] [0mSummary for JUnit not available.[0m
+[0m[[31merror[0m] [0mFailed: Total 370, Failed 5, Errors 0, Passed 365[0m
+[0m[[0mdebug[0m] [0mPassed tests:[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_Cond[0m
+[0m[[0mdebug[0m] [0m	l3.test.L3DesugaringWhitebox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CPSOptimizer_Blackbox[0m
+[0m[[0mdebug[0m] [0m	l3.test.L3DesugaringBlackbox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_NonTail[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Whitebox_Tail[0m
+[0m[[0mdebug[0m] [0m	l3.test.CL3ToCPS_Blackbox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CPSValueRepresentation_Whitebox[0m
+[0m[[0mdebug[0m] [0m	l3.test.CPSValueRepresentation_Blackbox[0m
+[0m[[31merror[0m] [0mFailed tests:[0m
+[0m[[31merror[0m] [0m	l3.test.CPSOptimizer_Greybox[0m
+[0m[[31merror[0m] [0m(test:[31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m

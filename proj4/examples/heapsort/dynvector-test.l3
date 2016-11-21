@@ -1,0 +1,25 @@
+;; Unit tests for the dynvector class
+
+(def v (dynvector-empty))
+
+;; Test underflow assertion
+;;(dynvector-get v -4)
+
+;; Test overflow assertion
+;;(dynvector-set! v 4 27)
+
+;; Test empty pop assertion
+;;(dynvector-pop-back! v)
+
+(dynvector-push-back! v 2)
+(dynvector-push-back! v 3)
+(dynvector-push-back! v 5)
+(dynvector-push-back! v 7)
+(dynvector-push-back! v 11)
+(dynvector-push-back! v 13)
+(dynvector-push-back! v 17)
+(dynvector-print v) (newline-print)
+
+(int-print (dynvector-pop-back! v)) (newline-print)
+(dynvector-print v) (newline-print)
+

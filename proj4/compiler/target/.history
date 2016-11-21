@@ -1,0 +1,20 @@
+test-only -- --
+ test-only -- --tests=testDesugaringRec
+q
+test-only -- --tests=testConditional2
+reset
+test-only -- --tests=testConditional2
+test-only -- --tests=testCommonSubexpressionEliminationComplexBlockTag
+test-only -- --tests=testEtaReductionInfintelyRecursiveFunction
+sbt test
+test-only -- --tests=testEtaReduction
+test-only -- --tests=testConstantFoldingBooleanOr
+test-only -- --tests=testNeutralElementsAddZero1
+test-only -- --tests=testConstantFoldingBooleanOr
+test-only -- --tests=testNeutralElementsAddZero1
+test-only -- --tests=testConstantFoldingBooleanOr
+test-only -- --tests=testEtaReduction
+test-only -- --tests=testDCEFunsRecursive3WithEtaReduction
+test-only -- --tests=testEtaReduction
+test-only -- --tests=testDCEFunsRecursive3WithEtaReduction
+sbt test

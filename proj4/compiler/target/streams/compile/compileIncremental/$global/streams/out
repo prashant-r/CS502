@@ -1,0 +1,34 @@
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mInitial source changes: [0m
+[0m[[0mdebug[0m] [0m	removed:Set()[0m
+[0m[[0mdebug[0m] [0m	added: Set()[0m
+[0m[[0mdebug[0m] [0m	modified: Set(/u/antor/u7/ravi18/CS502/proj4/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0mdebug[0m] [0mInvalidated products: Set()[0m
+[0m[[0mdebug[0m] [0mExternal API changes: API Changes: Set()[0m
+[0m[[0mdebug[0m] [0mModified binary dependencies: Set()[0m
+[0m[[0mdebug[0m] [0mInitial directly invalidated sources: Set(/u/antor/u7/ravi18/CS502/proj4/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0mdebug[0m] [0m[0m
+[0m[[0mdebug[0m] [0mSources indirectly invalidated by:[0m
+[0m[[0mdebug[0m] [0m	product: Set()[0m
+[0m[[0mdebug[0m] [0m	binary dep: Set()[0m
+[0m[[0mdebug[0m] [0m	external source: Set()[0m
+[0m[[0mdebug[0m] [0mAll initially invalidated sources: Set(/u/antor/u7/ravi18/CS502/proj4/compiler/src/l3/CPSOptimizer.scala)[0m
+[0m[[0minfo[0m] [0mCompiling 1 Scala source to /u/antor/u7/ravi18/CS502/proj4/compiler/target/scala-2.11/classes...[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mGetting compiler-interface from component compiler for Scala 2.11.7[0m
+[0m[[0mdebug[0m] [0mRunning cached compiler 6eeaf326, interfacing (CompilerInterface) with Scala compiler version 2.11.7[0m
+[0m[[0mdebug[0m] [0mCalling Scala compiler with arguments  (CompilerInterface):[0m
+[0m[[0mdebug[0m] [0m	-feature[0m
+[0m[[0mdebug[0m] [0m	-deprecation[0m
+[0m[[0mdebug[0m] [0m	-unchecked[0m
+[0m[[0mdebug[0m] [0m	-bootclasspath[0m
+[0m[[0mdebug[0m] [0m	/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/resources.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/rt.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/sunrsasign.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/jsse.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/jce.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/charsets.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/lib/jfr.jar:/usr/opt/oracle-jdk-bin-1.8.0.92/jre/classes:/homes/ravi18/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.11.7.jar[0m
+[0m[[0mdebug[0m] [0m	-classpath[0m
+[0m[[0mdebug[0m] [0m	/u/antor/u7/ravi18/CS502/proj4/compiler/target/scala-2.11/classes:/homes/ravi18/.ivy2/cache/com.lihaoyi/fastparse_2.11/jars/fastparse_2.11-0.3.4.jar:/homes/ravi18/.ivy2/cache/com.lihaoyi/fastparse-utils_2.11/jars/fastparse-utils_2.11-0.3.4.jar[0m
+[0m[[0mdebug[0m] [0mScala compilation took 9.1093796 s[0m
+[0m[[0mdebug[0m] [0mNew invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mInitial set of included nodes: Set()[0m
+[0m[[0mdebug[0m] [0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0mdebug[0m] [0m	Set()[0m
+[0m[[0mdebug[0m] [0mAll newly invalidated sources after taking into account (previously) recompiled sources:Set()[0m

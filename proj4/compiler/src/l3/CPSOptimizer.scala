@@ -9,21 +9,13 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
   import treeModule._
 
   def apply(tree: Tree): Tree = {
-    printTree("Tree to optimize :", tree)
     val simplifiedTree = fixedPoint(tree)(shrink)
     val maxSize = (size(simplifiedTree) * 1.5).toInt
     val ft = fixedPoint(simplifiedTree, 8) { t => inline(t, maxSize) }
-    //printTree("Final Tree : ", ft)
     ft
   }
 
-    private def printTree(title: String, tree: Tree): Unit = {
-      val w = new PrintWriter(Console.out)
-      w.println(title)
-      new CPSTreeFormatter[T](treeModule).toDocument(tree).format(80, w)
-      w.println()
-      w.flush()
-    }
+
   
   /* Counts how many times a symbol is encountered as an applied function,
    * and how many as a value
@@ -133,86 +125,82 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     def withEmptyInvEnvs =
       copy(lInvEnv = Map.empty, eInvEnv = Map.empty)
   }
-
   // Shrinking optimizations
   private def shrink(tree: Tree): Tree = {
+
+    def isAbsorbing(a: Name, prim:ValuePrimitive)(implicit s: State): Boolean =
+    (leftAbsorbing.contains((s.lEnv.get(a).get, prim)) || rightAbsorbing.contains((prim, s.lEnv.get(a).get))
+             || leftNeutral.contains((s.lEnv.get(a).get, prim)) || rightNeutral.contains((prim, s.lEnv.get(a).get)))
+
     def shrinkT(tree: Tree)(implicit s: State): Tree = tree match {
 
-      // If
-      case If(cond, args, thenC, elseC) =>
-        if (args.forall(a => s.lEnv.contains(a))) {
-          val value = cEvaluator((cond, args.map(a => s.lEnv.get(a).get)))
-          if (value) {
-            AppC(thenC, Nil)
-          }
-          else {
-            AppC(elseC, Nil)
-          }
-        }
-        else
-        {
-          //args.foreach(a => println(a + " a " + s.lEnv.contains(a)));
-          //println(tree)
-          tree
-        } 
+      // Extra credit
+      // Optimize Block primitives extra credit
+     case LetP(name, prim, args @ Seq(block, ival), body)
+        if unstable(prim) && (s.eInvEnv.map(x => (x._2, x._1)).get(block) match {
+          case Some(x) => fixedBlockAlloc(x._1)
+          case _ => false
+        }) => {
 
-
+          val toMatch = s.eInvEnv.filter(x => x._1._1 == blockSet && x._1._2(0) == block && x._1._2(1) == ival).toSeq
+          if(toMatch.isEmpty){
+            return LetP(name, prim, args, shrinkT(body)(s.withExp(name, prim, args)));
+          }
+          else{ 
+              val replace = toMatch(0)._1._2(2)
+            return shrinkT(body.subst(Substitution(name, replace)))(s.withSubst(name, replace))
+          }
+      }
+      
       case LetL(name, value, body) if s.dead(name) => {
         shrinkT(body)
       }
-      case LetL(name, value, body) if s.lInvEnv.contains(value) && name != s.lInvEnv.get(value).get =>
-        {
-          val preimage = name
-          val image = s.lInvEnv.get(value).get
-          LetL(name, value, body.subst(Substitution(preimage, image)))
-       }
-          
-      case LetL(name, value, body) =>{
-        LetL(name, value, shrinkT(body)(s.withLit(name, value)))
-      }
-      
-      // Primitives
-      case LetP(name, prim, args, body) if s.dead(name) && !impure(prim) => {
-          shrinkT(body)
-        }
       case LetP(name, prim, args, body) if s.eInvEnv.contains((prim, args)) && name != s.eInvEnv.get((prim, args)).get =>
         {
           val preimage2 = name
           val image2  = s.eInvEnv.get((prim,args)).get
           shrinkT(body.subst(Substitution(preimage2, image2))) (s.withSubst(preimage2, image2))
         }
-      case LetP(name, prim, args @ Seq(b, i), body)
-        if unstable(prim) && (s.eInvEnv.map(x => (x._2, x._1)).get(b) match {
-          case Some(x) => fixedBlockAlloc(x._1)
-          case _ => false
-        }) => {
-          s.eInvEnv.filter(x => x._1._1 == blockSet && x._1._2(0) == b && x._1._2(1) == i).toSeq match {
-            case x :: Nil =>
-              val v = x._1._2(2)
+
+      
+     
+      case LetL(name, value, body) if s.lInvEnv.contains(value) && name != s.lInvEnv.get(value).get =>
+        {
+          val preimage = name
+          val postimage = s.lInvEnv.get(value).get
+          LetL(name, value, body.subst(Substitution(preimage, postimage)))
+       }
           
-              shrinkT(body.subst(Substitution(name, v)))(s.withSubst(name, v))
-            case _ => LetP(name, prim, args, shrinkT(body)(s.withExp(name, prim, args)))
-          }
-        }
-    // Same args reduce
-     case LetP(name, prim, args, body) if sameArgReduce.isDefinedAt(prim) && args(0) == args(1)  => {
+      case LetL(name, value, body) =>{
+        LetL(name, value, shrinkT(body)(s.withLit(name, value)))
+      }
+      
+      case LetP(name, prim, args, body) if s.dead(name) && !impure(prim) => {
+          shrinkT(body)
+      }
+      
+     // If
+     case If(condition, arguments, thenC, elseC)
+       if arguments.map((sym : Symbol) => s.lEnv.contains(sym)).foldRight(true)(_ && _) => {
+          if(cEvaluator(condition, arguments.map(x => s.lEnv.get(x).get)))
+             AppC(thenC, Nil)
+          else
+             AppC(elseC, Nil)
+     }
+       
+      // Same args reduce
+     case LetP(name, prim, args, body) if args.size == 2 && sameArgReduce.isDefinedAt(prim) && args(0) == args(1)  => {
        val value = sameArgReduce(prim)
        LetL(name, value, shrinkT(body)(s.withLit(name, value)))
      }
      // Left/Right absorbing/neutral
-    case LetP(name, prim, args, body) if args.exists(a => s.lEnv.contains(a) &&
-         (leftAbsorbing.contains((s.lEnv.get(a).get, prim)) || rightAbsorbing.contains((prim, s.lEnv.get(a).get))
-             || leftNeutral.contains((s.lEnv.get(a).get, prim)) || rightNeutral.contains((prim, s.lEnv.get(a).get)))) => {
+     case LetP(name, prim, args, body) if args.exists(a => s.lEnv.contains(a) && isAbsorbing(a, prim)) => {
        
-       val value = args.filter(a => s.lEnv.contains(a) &&
-         (leftAbsorbing.contains((s.lEnv.get(a).get, prim)) || rightAbsorbing.contains((prim, s.lEnv.get(a).get))
-             || leftNeutral.contains((s.lEnv.get(a).get, prim)) || rightNeutral.contains((prim, s.lEnv.get(a).get))))
+       val value = args.filter(a => s.lEnv.contains(a) &&isAbsorbing(a, prim))
        args match {
-         case Seq(x, y) if x == value.head => shrinkT(body.subst(Substitution(name, y)))
-         case Seq(x, y) if y == value.head => shrinkT(body.subst(Substitution(name, x)))
-         case _ => {
-           shrinkT(body) // Should never happen
-         }
+         case Seq(x, y) => {if (x == value.head) 
+         {return shrinkT(body.subst(Substitution(name, y)))}
+         else {return shrinkT(body.subst(Substitution(name, x)))}}
        }
      }
      
@@ -222,7 +210,12 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       LetL(name, value, shrinkT(body)(s.withLit(name, value)))
      }
      
+     
+
      case LetP(name, prim, args, body) => prim match {
+       case x if prim == identity => {
+            shrinkT(body.subst(Substitution(name, args(0))))(s.withSubst(name, args(0)))
+       }
        case x if blockLength(x) => 
          s.eInvEnv.map(x => (x._2, x._1)).get(args(0)) match {
            case Some(y) =>
@@ -235,11 +228,8 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
              val fresh = Symbol.fresh("tag")
              LetL(fresh,blockAllocTag(x._1), shrinkT(body.subst(Substitution(name, fresh)))(s.withLit(fresh, blockAllocTag(x._1))))
            case None => LetP(name, prim, args, shrinkT(body)(s.withExp(name, prim, args)))
-         }
-         
-       case x if prim == identity => {
-            shrinkT(body.subst(Substitution(name, args(0))))(s.withSubst(name, args(0)))
-          }
+       }
+       
        case _ => LetP(name, prim, args, shrinkT(body))
      }
       
@@ -282,7 +272,8 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
       
       // Continuations
       case LetC(continuations, body) => {
-      // Union-Find 
+
+        // Union-Find 
         var unionFind = IUnionFind(continuations.length + 2);
         var myStatusMap = Map[Object, Int]()
         var v = 1
@@ -310,7 +301,6 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
             }
         // DCE
         val cnts = continuations.filter(f => unionFind.connected(myStatusMap.get(f).get,continuations.length + 1))
-        //val cnts = continuations.filterNot(c=> s.dead(c.name))
         cnts match{
           case Nil => shrinkT(body)
           case _ => LetC(cnts.map(x => 
@@ -325,7 +315,6 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         }
       }
     val t = shrinkT(tree)(State(census(tree)))
-    //printTree("Tree shrinked :", t)
     t
     
   }
@@ -338,38 +327,34 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
     val trees = Stream.iterate((0, tree), fibonacci.length) { case (i, tree) =>
       val funLimit = fibonacci(i)
       val cntLimit = i
-    
-          def cntDefFreshNames(c: CntDef): Map[Name, Name] = freshNames(c.body, (
-            (Symbol.fresh("inlC"), c.name) +:
-            c.args.map(a => (Symbol.fresh("inlCA"), a))
-        ).foldLeft(Map[Name,Name]())(_ + _))
-      
-      def funDefFreshNames(f: FunDef): Map[Name, Name] = freshNames(f.body, (
-            (Symbol.fresh("inlF"), f.name) +:
-            (Symbol.fresh("inlFretC"), f.retC) +:
-            f.args.map(a => (Symbol.fresh("inlFA"), a))
-        ).foldLeft(Map[Name,Name]())(_ + _))
-      
+  
       def freshNames(t: Tree, subst: Map[Name, Name]) : Map[Name, Name] = t match {
         case LetL(name, value, body) => freshNames(body, subst + (Symbol.fresh("inlL") -> name))
         case LetP(name, prim, args, body) => freshNames(body, subst + (Symbol.fresh("inlP") -> name))
         case LetC(continuations, body) => {
-          val freshMap = continuations.foldLeft(Map[Name,Name]())(
-              (m, c) => m ++ cntDefFreshNames(c))
-          freshNames(body, freshMap)
+          def getFreshNamesCntDef(c: CntDef): Map[Name, Name] = freshNames(c.body, (
+            (Symbol.fresh("inlC"), c.name) +:
+            c.args.map(a => (Symbol.fresh("cntDefFreshName"), a))
+          ).foldLeft(Map[Name,Name]())(_ + _))
+          val freshNameMap = continuations.foldLeft(Map[Name,Name]())(
+              (r, k) => r ++ getFreshNamesCntDef(k))
+          freshNames(body, freshNameMap)
         }
         case LetF(functions, body) => {
-          val freshMap = functions.foldLeft(Map[Name,Name]())(
-              (m, f) => m ++ funDefFreshNames(f))
+          def getFreshNameFunDef(f: FunDef): Map[Name, Name] = freshNames(f.body, (
+            (Symbol.fresh("funDefFreshName"), f.name) +:
+            (Symbol.fresh("cntDefFreshName"), f.retC) +:
+            f.args.map(a => (Symbol.fresh("funDefFreshName"), a))
+        ).foldLeft(Map[Name,Name]())(_ + _))
+          val freshNameMap = functions.foldLeft(Map[Name,Name]())(
+              (r, k) => r ++ getFreshNameFunDef(k))
               
-          freshNames(body, freshMap)
+          freshNames(body, freshNameMap)
         }
         case _ => Map[Name,Name]()
       }
-      
-       
 
-       def inlineT(tree: Tree)(implicit s: State): Tree = tree match {
+      def inlineT(tree: Tree)(implicit s: State): Tree = tree match {
         case LetL(name, value, body) =>
           LetL(name, value, inlineT(body))
 
@@ -377,16 +362,16 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
           LetP(name, prim, args, inlineT(body))
         
         case LetC(continuations, body) if size(tree) <= cntLimit => {
-          def isInlineable(c: CntDef): Boolean = 
+          def canInline(c: CntDef): Boolean = 
             s.appliedOnce(c.name) && continuations.forall(c2 => {
-              census(c2.body).getOrElse(c.name, 0) == 0
+              State(census(c2.body)).dead(c.name) 
             })
           
-          val continuationsToInline = continuations.filter(isInlineable(_))
+          val continuationsToInlineHere = continuations.filter(canInline(_))
           
-          val state = s.withCnts(continuationsToInline)
+          val state = s.withCnts(continuationsToInlineHere)
 
-          LetC(continuations.filterNot(isInlineable(_)).map(c => 
+          LetC(continuations.filterNot(canInline(_)).map(c => 
             c.copy(body = inlineT(c.body)(state))), 
             inlineT(body)(state))
         }
@@ -394,38 +379,36 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         case LetC(continuations, body) =>
           LetC(continuations.map(c => c.copy(body = inlineT(c.body))), inlineT(body))
         
+        case LetF(functions, body) if size(tree) < funLimit => {
+          def canInline(f: FunDef): Boolean = 
+            s.appliedOnce(f.name) && functions.forall(f2 => {
+              State(census(f2.body)).dead(f.name) 
+            })
+          val functionsAbleToInline = functions.filter(canInline(_))
+          LetF(functions.filterNot(canInline(_)).map(f => 
+            f.copy(body = inlineT(f.body)(s.withFuns(functionsAbleToInline)))),
+            inlineT(body)(s.withFuns(functionsAbleToInline)))
+        }
+
+
         case AppC(name, args) if s.cEnv.contains(name) => {
-           val cntDef = s.cEnv.get(name).get
-           val freshNamesMap = freshNames(cntDef.body, Map[Name, Name]())
-           
-           val r1 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
+           val theCntDef = s.cEnv.get(name).get
+           val freshNamesMap = freshNames(theCntDef.body, Map[Name, Name]())
+           val func1 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
              case x => freshNamesMap.get(x) match {
              case Some(n) => n
              case None => x
              }
            }
-
-           val (keys, vals) = freshNamesMap.unzip
-
-           val freshBody = cntDef.body.subst(Substitution(keys.toSeq, keys map { key => r1(key) } toSeq))
-           
-           val r2 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
-             case x if cntDef.args.contains(x) => args(cntDef.args.indexOf(x))
+           val func2 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
+             case x if theCntDef.args.contains(x) => args(theCntDef.args.indexOf(x))
              case x => x
            }
-
-           inlineT(freshBody.subst(Substitution(cntDef.args.toSeq, cntDef.args map { key => r2(key) } toSeq)))
+           val (keys, valuess) = freshNamesMap.unzip
+           val freshBody = theCntDef.body.subst(Substitution(keys.toSeq, keys map { key => func1(key) } toSeq))
+           inlineT(freshBody.subst(Substitution(theCntDef.args.toSeq, theCntDef.args map { key => func2(key) } toSeq)))
        }
-        case LetF(functions, body) if size(tree) < funLimit => {
-          def isInlineable(f: FunDef): Boolean = 
-            s.appliedOnce(f.name) && functions.forall(f2 => {
-              census(f2.body).getOrElse(f.name, 0) == 0
-            })
-          val functionsToInline = functions.filter(isInlineable(_))
-          LetF(functions.filterNot(isInlineable(_)).map(f => 
-            f.copy(body = inlineT(f.body)(s.withFuns(functionsToInline)))),
-            inlineT(body)(s.withFuns(functionsToInline)))
-        }
+        
         
         case LetF(functions, body) =>
           LetF(functions.map(f => f.copy(body = inlineT(f.body))), inlineT(body))
@@ -434,21 +417,21 @@ abstract class CPSOptimizer[T <: CPSTreeModule { type Name = Symbol }]
         case AppF(name, retC, args) if s.fEnv.contains(name) => {
           val funDef = s.fEnv.get(name).get
           val freshNamesMap = freshNames(funDef.body, Map[Name, Name]())
-          val r1 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
+          val func1 : PartialFunction[Name, Name] = PartialFunction[Name, Name] {
             case x => freshNamesMap.get(x) match {
               case Some(n) => n
               case None => x
             }
           }
-          val (keys, vals) = freshNamesMap.unzip
-           val freshBody = funDef.body.subst(Substitution(keys.toSeq, keys map { key => r1(key) } toSeq))
-           val r2: PartialFunction[Name, Name] = PartialFunction[Name, Name] {
+          val func2: PartialFunction[Name, Name] = PartialFunction[Name, Name] {
              case x if x == funDef.retC => retC
              case x if funDef.args.contains(x) => args(funDef.args.indexOf(x))
              case x => x
            }
-           val retc = funDef.retC +: funDef.args.toSeq      
-           inlineT(freshBody.subst(Substitution(retc, retc map { key => r2(key) } toSeq)))
+          val (keys, valuess) = freshNamesMap.unzip
+          val newBody = funDef.body.subst(Substitution(keys.toSeq, keys map { key => func1(key) } toSeq)) 
+          val retcA: Seq[Name] = funDef.retC +: funDef.args.toSeq    
+          return inlineT(newBody.subst(Substitution(retcA, retcA map ( key => func2(key) ) toSeq)))
         } 
         
         case _ =>
@@ -724,4 +707,6 @@ object CPSOptimizerLow extends CPSOptimizer(SymbolicCPSTreeModuleLow)
     case (CPSGe, Seq(x, y)) => x >= y
     case (CPSGt, Seq(x, y)) => x > y
   }
+
+  //discussed solution strategy with karan 
 }

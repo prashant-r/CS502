@@ -65,6 +65,23 @@ typedef struct sObject {
   };
 } Object;
 
+
+typedef struct coalescer {
+
+  Object * obj;
+  union {
+    /* OBJ_VALUE* */
+    value_t* value;
+  };
+} coalesce;
+
+
+
+
+// my defined functions
+void attemptCoalescing();
+void performCoalescing(coalesce large, coalesce small);
+
 typedef struct {
   Object* allocatedObjects;
   Object* freedObjects;
@@ -78,7 +95,7 @@ VM* newVM() {
   vm->allocatedObjects = NULL;
   vm->freedObjects = NULL;
   vm->numAllocatedObjects = 0;
-  vm->numFreeObjects = 8;
+  vm->numFreeObjects = 0;
   return vm;
 }
 
@@ -269,10 +286,13 @@ static value_t* allocate(tag_t tag, value_t size) {
   if (heap_first_block + size + HEADER_SIZE >= heap_end) {
     Object** object = &vm->freedObjects;
     int total_size_available = 0;
+    value_t * this_block;
+    int counter = 0;
+    int before_loop_start_num_freed = vm->numFreeObjects;
     while (*object) {
+
       Object* traversal = *object;
-      //printf("First dude on list is %d \n", vm->freedObjects->value);
-      value_t* this_block = traversal->value;
+      this_block = traversal->value;
       value_t curr_size =  header_unpack_size(this_block[-1]);  
       total_size_available += curr_size;
       if(curr_size >= size)
@@ -305,7 +325,8 @@ static value_t* allocate(tag_t tag, value_t size) {
         //printf("-----\n ");
         return this_block;
       }
-      object = &(*object)->next;
+      counter++;
+      object = &(*object)->next; 
     }
     return NULL;
   }
@@ -336,8 +357,6 @@ static void mark(value_t* block) {
   TAILQ_INIT(&head);
   value_t* ext = block;
   unsigned int size;
-  tag_t _tag;
-  unsigned int _size;
 
   while(ext != NULL)
   {
@@ -349,11 +368,7 @@ static void mark(value_t* block) {
         if (bitmap_is_bit_set(ext[i])) {
               aux = addr_v_to_p(ext[i]);
 
-              assert(aux >= heap_start);
-              assert(aux < heap_end);
-
-              _tag = header_unpack_tag(aux[-1]);
-              _size = header_unpack_size(aux[-1]);
+              assert(aux >= heap_start && aux < heap_end );
 
               bitmap_clear_bit(aux);
               add_to_stack(aux);
@@ -373,17 +388,18 @@ static void sweep() {
     Object* traversal = *object;
     
      if (bitmap_is_bit_set(addr_p_to_v(traversal->value))) {
-    //   /* This object wasn't reached, so remove it from the list and free it. */
+     //   /* This object wasn't reached, so remove it from the list and free it. */
          //printf("Ready to free %d : \n", traversal->value);
-         Object* unreached = *object;
-         *object = unreached->next;
-         value_t curr_size =  header_unpack_size(unreached->value[-1]);
-         bitmap_clear_bit(traversal->value);
-         // value_t a;
-         // for(a = 0; a < curr_size ; a++)
-         //  unreached->value[a] = 0;
-         newFreeObject(unreached->value);
-         vm->numAllocatedObjects--;
+          Object* unreached = *object;
+          *object = unreached->next;
+
+          value_t curr_size =  header_unpack_size(unreached->value[-1]);
+          bitmap_clear_bit(traversal->value);
+          value_t a;
+          for(a = 0; a < curr_size ; a++)
+           unreached->value[a] = 0;
+          newFreeObject(unreached->value);
+          vm->numAllocatedObjects--;
          //printf("Num allocated objects %d free objects %d \n", vm->numAllocatedObjects, vm->numFreeObjects);
     } else {
     //   /* This object was reached, so unmark it (for the next GC) and move on to
@@ -391,9 +407,82 @@ static void sweep() {
          bitmap_set_bit(traversal->value);
          object = &(*object)->next;
      }
+
+     attemptCoalescing();
   }
 }
 
+
+value_t sort_fn_ascend(const coalesce *ptr1, const coalesce *ptr2)
+{
+   value_t a = (coalesce*)(ptr1)->value;
+   value_t b = (coalesce*)(ptr2)->value;
+   return a - b;
+}
+
+
+void attemptCoalescing()
+{
+    Object** object = &vm->freedObjects;
+    Object*  tmpptr = *object;
+    coalesce newitems[vm->numFreeObjects];
+    int i = 0;
+    while(tmpptr != NULL)
+    {
+        printf("tmpptr->value %u i %d \n", tmpptr->value , i);
+        newitems[i].value = tmpptr->value;
+        newitems[i].obj = tmpptr;
+        tmpptr = tmpptr->next;
+        i++;
+    }
+    assert(i == vm->numFreeObjects);
+    printf("Uh oh %d \n", vm->numFreeObjects);
+    tmpptr = *object;
+    qsort ( newitems , vm->numFreeObjects , sizeof(coalesce), sort_fn_ascend);
+    int a =0;
+    int curr = 0;
+    int firstPos = 0;
+    printf("Start of loop \n");
+    // while(a < vm->numFreeObjects)
+    // {
+    //   value_t curr_size =  header_unpack_size(newitems[curr].value);
+    //   //printf("newitems %d curr_size %d ", newitems[curr].value, curr_size);
+    //   // if(a + 1 < vm->numFreeObjects && newitems[a].value + curr_size == newitems[a+1].value)
+    //   // {
+
+    //   //    performCoalescing(newitems[a], newitems[a+1]);
+    //   //    a =a+1;
+    //   // }
+    //   // else
+    //   // {
+    //   //    a = a+1;
+    //   //    curr = firstPos;
+    //   // }
+    // }
+    return;
+}
+
+void performCoalescing(coalesce large, coalesce small)
+{
+  printf("Asking to coalesce \n");
+
+  value_t large_size = header_unpack_size(large.value);
+  value_t small_size = header_unpack_size(small.value);
+
+  printf("Came here large was %d small was %d \n", large.value, small.value);
+  // printf("Came here large size %d small size %d \n", large_size, small_size);
+  // // decouple small
+  // // if(small.obj->prev != NULL)
+  // //   small.obj->prev->next = small.obj->next;
+  // // printf("Next failed; \n");
+  // // if(small.obj->next != NULL)
+  // //   small.obj->next->prev = small.obj->prev;
+
+  // // printf("Now here \n");
+  // free(small.obj);
+  // // coalesce into large
+  // large.obj->value[-1] = header_pack(tag_None, large_size + small_size);
+}
 
 value_t* memory_allocate(tag_t tag, value_t size) {
   value_t* first_try = allocate(tag, size);

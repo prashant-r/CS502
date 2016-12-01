@@ -360,7 +360,6 @@ static void mark(value_t* block) {
 
   while(ext != NULL)
   {
-    //printf("ext is %d \n", ext);
     size = header_unpack_size(ext[-1]);
     int i;
     for (i = 0; i < size; i++) {
@@ -371,8 +370,8 @@ static void mark(value_t* block) {
               assert(aux >= heap_start && aux < heap_end );
 
               bitmap_clear_bit(aux);
+
               add_to_stack(aux);
-              //printf("Added to stack \n");
             }
      }
      //printf("Right here! \n");
@@ -389,21 +388,20 @@ static void sweep() {
     
      if (bitmap_is_bit_set(addr_p_to_v(traversal->value))) {
      //   /* This object wasn't reached, so remove it from the list and free it. */
-         //printf("Ready to free %d : \n", traversal->value);
+         // printf("Ready to free %d : \n", traversal->value);
           Object* unreached = *object;
           *object = unreached->next;
 
           value_t curr_size =  header_unpack_size(unreached->value[-1]);
           bitmap_clear_bit(traversal->value);
           value_t a;
-          for(a = 0; a < curr_size ; a++)
-           unreached->value[a] = 0;
           newFreeObject(unreached->value);
           vm->numAllocatedObjects--;
          //printf("Num allocated objects %d free objects %d \n", vm->numAllocatedObjects, vm->numFreeObjects);
     } else {
     //   /* This object was reached, so unmark it (for the next GC) and move on to
     //    the next. */
+         //printf("Allocated %d \n", traversal->value);
          bitmap_set_bit(traversal->value);
          object = &(*object)->next;
      }
@@ -413,10 +411,10 @@ static void sweep() {
 }
 
 
-value_t sort_fn_ascend(const coalesce *ptr1, const coalesce *ptr2)
+unsigned int sort_fn_ascend(const coalesce *ptr1, const coalesce *ptr2)
 {
-   value_t a = (coalesce*)(ptr1)->value;
-   value_t b = (coalesce*)(ptr2)->value;
+   value_t * a = (coalesce*)(ptr1)->value;
+   value_t * b = (coalesce*)(ptr2)->value;
    return a - b;
 }
 
@@ -429,47 +427,41 @@ void attemptCoalescing()
     int i = 0;
     while(tmpptr != NULL)
     {
-        printf("tmpptr->value %u i %d \n", tmpptr->value , i);
         newitems[i].value = tmpptr->value;
         newitems[i].obj = tmpptr;
         tmpptr = tmpptr->next;
         i++;
     }
     assert(i == vm->numFreeObjects);
-    printf("Uh oh %d \n", vm->numFreeObjects);
-    tmpptr = *object;
-    qsort ( newitems , vm->numFreeObjects , sizeof(coalesce), sort_fn_ascend);
-    int a =0;
-    int curr = 0;
-    int firstPos = 0;
-    printf("Start of loop \n");
+    // tmpptr = *object;
+    // //printf("Prior to sort \n");
+    // qsort(newitems , vm->numFreeObjects , sizeof(coalesce), sort_fn_ascend);
+    // //printf("Post sort \n");
+    // int a =0;
+    // int curr = 0;
+    // int firstPos = 0;
     // while(a < vm->numFreeObjects)
     // {
-    //   value_t curr_size =  header_unpack_size(newitems[curr].value);
-    //   //printf("newitems %d curr_size %d ", newitems[curr].value, curr_size);
-    //   // if(a + 1 < vm->numFreeObjects && newitems[a].value + curr_size == newitems[a+1].value)
-    //   // {
-
-    //   //    performCoalescing(newitems[a], newitems[a+1]);
-    //   //    a =a+1;
-    //   // }
-    //   // else
-    //   // {
-    //   //    a = a+1;
-    //   //    curr = firstPos;
-    //   // }
+    //   curr = a;
+    //   value_t curr_size =  header_unpack_size(newitems[curr].value[-1]);
+    //   //printf("newitems %u curr_size %u next item %u \n", newitems[curr].value, curr_size, newitems[a+1].value);
+    //   if(a + 1 < vm->numFreeObjects && newitems[curr].value + curr_size == newitems[a+1].value)
+    //   {
+    //      performCoalescing(newitems[curr], newitems[a+1]);
+    //   }
+    //   a = a+1;
     // }
     return;
 }
 
 void performCoalescing(coalesce large, coalesce small)
 {
-  printf("Asking to coalesce \n");
+  //printf("Asking to coalesce \n");
 
   value_t large_size = header_unpack_size(large.value);
   value_t small_size = header_unpack_size(small.value);
 
-  printf("Came here large was %d small was %d \n", large.value, small.value);
+  printf("Coalesce large was %d small was %d \n", large.value, small.value);
   // printf("Came here large size %d small size %d \n", large_size, small_size);
   // // decouple small
   // // if(small.obj->prev != NULL)

@@ -45,8 +45,8 @@ bin/vm: bin ${SRCS}
 
 test: vm 
 	@((echo 8   | bin/vm ../examples/asm/queens.asm  2>&1) >/dev/null && echo Queens test passed!) || echo Queens test failed!
-	@((echo 110 | bin/vm ../examples/asm/bignums.asm 2>&1) >/dev/null && echo Bignums test passed!) || echo Bignums test failed!
-	@((echo 30  | bin/vm ../examples/asm/pascal.asm  2>&1) >/dev/null && echo Pascal test passed!) || echo Pascal test failed!
+	@((echo 280 | bin/vm ../examples/asm/bignums.asm 2>&1) >/dev/null && echo Bignums test passed!) || echo Bignums test failed!
+	@((echo 120 | bin/vm ../examples/asm/pascal.asm  2>&1) >/dev/null && echo Pascal test passed!) || echo Pascal test failed!
 	@((echo 10  | bin/vm ../examples/asm/maze.asm    2>&1) >/dev/null && echo Maze test passed!) || echo Maze test failed!
 
 clean:
